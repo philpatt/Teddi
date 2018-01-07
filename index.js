@@ -1,6 +1,6 @@
 // define all requires/modules/packages
 
-// require('dotenv').config();
+require('dotenv').config();
 var bodyParser = require('body-parser');
 var express = require('express');
 var ejsLayouts = require('express-ejs-layouts');
@@ -13,13 +13,14 @@ var app = express ();
 //define middleware
 
 app.set('view engine', 'ejs');
-app.set(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: false}));
 app.use(ejsLayouts);
 app.use(session({
 	secret:'abc123',
 	resave: false,
 	saveUninitialized: true
 }));
+app.use(express.static(__dirname + '/public'));
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
