@@ -1,6 +1,6 @@
 // define all requires/modules/packages
 
-require('dotenv').config();
+// require('dotenv').config();
 var bodyParser = require('body-parser');
 var express = require('express');
 var ejsLayouts = require('express-ejs-layouts');
