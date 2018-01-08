@@ -3,6 +3,7 @@
 require('dotenv').config();
 var bodyParser = require('body-parser');
 var express = require('express');
+var request = require('request');
 var ejsLayouts = require('express-ejs-layouts');
 var flash = require('connect-flash');
 var isLoggedIn = require('./middleware/isloggedin')
@@ -31,9 +32,41 @@ app.use(function(req, res, next){
 });
 
 //routes
-app.get('/', function(req, res){
-	res.render('home');
+// app.get('/', function(req, res){
+// 	// res.render('home');
+//   var npsUrl = 'https://developer.nps.gov/api/v1/parks?limit=3&start=1&q=colorado&api_key=geQVFH3lljstuyw8nGrQ9WjKYUQT5JibCVkWK4g4';
+//   request(npsUrl, function(error, response, body) {
+//     var parks = JSON.parse(body).results;
+//     res.render('home', { results: parks});
+//   });
+// });
+
+app.get('/', function(req,res){
+	request('https://developer.nps.gov/api/v1/parks?limit=3&start=1&q=colorado&api_key=geQVFH3lljstuyw8nGrQ9WjKYUQT5JibCVkWK4g4', function(error, response, body){
+		if(!error && response.statusCode == 200){
+		res.send(body);
+		}
+	// });
+	// var q = {
+	// s: 'colorado',
+	// apikey: process.env.API_KEY
+	// }
+
+	// request({
+	// 	url: 'https://developer.nps.gov/api/v1/parks/', 
+	// 	q: q
+	// }, function(error, response, body){
+	// 	if(!error && response.statusCode == 200){
+	// 		var dataObj = JSON.parse(body);
+	// 		res.render('home',{results:dataObj.Search});
+	// 	}
+	});
 });
+
+
+
+
+
 
 app.get('/profile', isLoggedIn, function(req, res){
 	res.render('profile');
