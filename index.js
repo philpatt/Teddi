@@ -42,25 +42,26 @@ app.use(function(req, res, next){
 // });
 
 app.get('/', function(req,res){
-	request('https://developer.nps.gov/api/v1/parks?limit=3&start=1&q=colorado&api_key=geQVFH3lljstuyw8nGrQ9WjKYUQT5JibCVkWK4g4', function(error, response, body){
-		if(!error && response.statusCode == 200){
-		res.send(body);
-		}
-	// });
-	// var q = {
-	// s: 'colorado',
-	// apikey: process.env.API_KEY
-	// }
-
-	// request({
-	// 	url: 'https://developer.nps.gov/api/v1/parks/', 
-	// 	q: q
-	// }, function(error, response, body){
+	// request('https://developer.nps.gov/api/v1/parks?limit=3&start=1&q=colorado&api_key=geQVFH3lljstuyw8nGrQ9WjKYUQT5JibCVkWK4g4', function(error, response, body){
 	// 	if(!error && response.statusCode == 200){
-	// 		var dataObj = JSON.parse(body);
-	// 		res.render('home',{results:dataObj.Search});
+	// 	res.send(body);
 	// 	}
-	});
+	// // });
+	// // var q = {
+	// // s: 'colorado',
+	// // apikey: process.env.API_KEY
+	// // }
+
+	// // request({
+	// // 	url: 'https://developer.nps.gov/api/v1/parks/', 
+	// // 	q: q
+	// // }, function(error, response, body){
+	// // 	if(!error && response.statusCode == 200){
+	// // 		var dataObj = JSON.parse(body);
+	// // 		res.render('home',{results:dataObj.Search});
+	// // 	}
+	// });
+	res.render('home');
 });
 
 
