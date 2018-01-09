@@ -8,24 +8,22 @@
 				<span class='icon-bar'></span>
 				<span class='icon-bar'></span>
 			</button>
-			<a class="navbar-brand" href="/"><img src="/img/NPS-logo.png" alt="NPS" width="25px" height="30px"></a>
+			<a class="navbar-brand" href="/"><img src="/img/NPS-logo.png" alt="NPS" width="25px" height="30px">teddi</a>
 		</div>
 		<!-- define links in navbar -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<% if(!currentUser){ %>
 				<li>
-					<a href="/auth/login">Login</a>
+					<a href="/userAuth/login">Login</a>
 				</li>
 				<li>
-					<a href="/auth/signup">Sign Up</a>
+					<a href="/userAuth/signup">Sign Up</a>
 				</li>
 				<% } else { %>
 				<li>
-					<a href="/auth/logout">Logout</a>
+					<a href="/userAuth/logout">Logout, <%= currentUser.firstname %> ?</a>
 				</li>
-
-
 				<% }; %>
 			</ul>
 		</div>
