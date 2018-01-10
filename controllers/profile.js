@@ -8,15 +8,14 @@ var isLoggedIn = require('../middleware/isloggedin');
 var request = require('request');
 
 // YOU ARE HERE: /profile/
-
 // show profile with favorited parks
-router.get('/', isLoggedIn, function(req, res){
+router.get('/profile', isLoggedIn, function(req, res){
 	res.render('user/profile');
 
 });
 
 //localhost:3000/profile/2
-router.get('/:id')
+// router.get('/:id')
 
 // router.post('/profile', function(req, res)){
 

@@ -35,13 +35,13 @@ app.get('/', function(req,res){
 });
 
 //define controllers
-app.use('/userAuth', require('./controllers/auth'));
-// localhost:3000/profile
-app.use('/profile', require('./controllers/profile'));
+app.use('/auth', require('./controllers/auth'));
+// localhost:3000/prof
+app.use('/prof', require('./controllers/profile'));
 app.use('/userSearch', require('./controllers/search'));
 app.use('/search', require('./controllers/search'));
 // app.use('/userResults', require('./controllers/results'));
-app.use('/userShow', require('./controllers/show'));
+// app.use('/userShow', require('./controllers/show'));
 
 
 

@@ -12,9 +12,9 @@ router.get('/login', function(req, res){
 
 //post login info on form 
 router.post('/login', passport.authenticate('local', {
-	successRedirect: '/userProf/profile', 
+	successRedirect: '/prof/profile', 
 	successFlash: 'Login Successful!',
-	failureRedirect: '/userAuth/login',
+	failureRedirect: '/auth/login',
 	failureFlash : 'Invalid Credentials'
 }));
 //get sign up form
@@ -36,18 +36,18 @@ router.post('/signup', function(req, res, next){
 		if(wasCreated){
 			//goodjob, you didnt make a duplicate!
 			passport.authenticate('local', {
-				successRedirect: '/userProf/profile',
+				successRedirect: '/prof/profile',
 				successFlash: 'successfuly logged in'
 			})(req, res, next);
 		}
 		else{
 			//badnews you tried to sign up when you should have logged in
 			req.flash('error', 'email already exists');
-			res.redirect('/userAuth/login');
+			res.redirect('/auth/login');
 		}
 	}).catch(function(err){
 		req.flash('error', error.message)
-		res.redirect('/userAuth/signup');
+		res.redirect('/auth/signup');
 	});
 });
 
@@ -55,24 +55,8 @@ router.post('/signup', function(req, res, next){
 router.get('/logout', function(req, res){
 	req.logout();
 	req.flash('success', 'successfuly logged out');
-	res.redirect('/userAuth/login');
+	res.redirect('/auth/login');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

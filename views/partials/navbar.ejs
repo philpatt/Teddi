@@ -8,24 +8,25 @@
 				<span class='icon-bar'></span>
 				<span class='icon-bar'></span>
 			</button>
-			<a class="navbar-brand" href="/"><img src="/img/NPS-logo.png" alt="NPS" width="25px" height="30px">teddi</a>
+			<a class="navbar-brand" href="/"><img class="img-responsive" src="/img/logo.png" alt="logo" width="30px" height="35px"></a>
 		</div>
 		<!-- define links in navbar -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<% if(!currentUser){ %>
 				<li>
-					<a href="/userAuth/login">Login</a>
+					<a href="/auth/login">Login</a>
 				</li>
 				<li>
-					<a href="/userAuth/signup">Sign Up</a>
+					<a href="/auth/signup">Sign Up</a>
 				</li>
 				<% } else { %>
 				<li>
-					<a href="/userAuth/logout">Logout, <%= currentUser.firstname %>?</a>
+					<a href="/auth/logout">Logout, <%= currentUser.firstname %>?</a>
 				</li>
 				<li>
-					<a href="/userProf/profile"><%= currentUser.firstname %>'s Profile</a>
+					<a href="/prof/profile">
+						<%=currentUser.firstname %>'s Profile</a>
 				</li>
 				<% }; %>
 			</ul>
