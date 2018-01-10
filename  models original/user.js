@@ -1,5 +1,4 @@
 'use strict';
-
 var bcrypt = require('bcrypt');
 
 module.exports = (sequelize, DataTypes) => {
@@ -43,7 +42,6 @@ module.exports = (sequelize, DataTypes) => {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
-        models.user.hasMany(models.park);
       }
     }
   });
@@ -57,5 +55,30 @@ module.exports = (sequelize, DataTypes) => {
     delete user.password;
     return user; 
   }
-    return user;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return user;
 };

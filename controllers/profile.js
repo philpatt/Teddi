@@ -20,6 +20,19 @@ router.get('/profile', isLoggedIn, function(req, res){
 
 });
 
+router.post('/profile', function(req, res)){
+
+
+}
+
+// router.post('/', function(req, res) {
+//     // TODO: add to database
+//     db.pokemon.create({
+//     	name: req.body.name
+//     }).then(function(){
+//     	res.redirect('/pokemon');
+//     });
+// });
 
 
 //delete favorites

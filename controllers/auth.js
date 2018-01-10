@@ -28,7 +28,6 @@ router.post('/signup', function(req, res, next){
 	db.user.findOrCreate({
 		where: { email: req.body.email },
 		defaults: {
-			username: req.body.username,
 			firstname: req.body.firstname,
 			lastname: req.body.lastname,
 			password: req.body.password

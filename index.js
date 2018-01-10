@@ -29,25 +29,17 @@ app.use(function(req, res, next){
 	next();
 });
 
-
-
 app.get('/', function(req,res){
 	res.render('home');
 	//add suggested parks 
 });
 
-// app.get('/user/profile', isLoggedIn, function(req, res){
-// 	console.log('get profile');
-// 	res.render('profile');
-// });
-
-
-
 //define controllers
 app.use('/userAuth', require('./controllers/auth'));
 app.use('/userProf', require('./controllers/profile'));
-// app.use('/search', require('./controllers/search'));
-// app.use('/show', require('./controllers/show'));
+app.use('/userResults', require('./controllers/results'));
+// app.use('/userSearch', require('./controllers/search'));
+app.use('/userShow', require('./controllers/show'));
 
 
 
