@@ -7,23 +7,21 @@ var router = express.Router();
 var isLoggedIn = require('../middleware/isloggedin');
 var request = require('request');
 
-
-
-
-
-
-
+// YOU ARE HERE: /profile/
 
 // show profile with favorited parks
-router.get('/profile', isLoggedIn, function(req, res){
+router.get('/', isLoggedIn, function(req, res){
 	res.render('user/profile');
 
 });
 
-router.post('/profile', function(req, res)){
+//localhost:3000/profile/2
+router.get('/:id')
+
+// router.post('/profile', function(req, res)){
 
 
-}
+// }
 
 // router.post('/', function(req, res) {
 //     // TODO: add to database

@@ -1,3 +1,9 @@
-<h2>this is where the search results will go</h2>
+<h2>Search Results: </h2>
 <hr>
-
+  <div>
+    <% results.forEach(function(item) { %>
+	   	<ul>
+	       <h2><%= item.name %></h2>
+	    </ul>
+    <% }); %>
+  </div>
