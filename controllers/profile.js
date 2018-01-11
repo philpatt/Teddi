@@ -14,6 +14,8 @@ router.get('/profile', isLoggedIn, function(req, res){
 
 });
 
+
+
 //localhost:3000/profile/2
 // router.get('/:id')
 

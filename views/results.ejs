@@ -4,7 +4,7 @@
     <% results.forEach(function(item) { %>
 	   	<ul>
 	       <h2><%= item.name %></h2>
-	        <form method="POST" action="/results">
+	        <form method="POST" action="/favorites">
             <input hidden type="text"  name="userId" value='<%= currentUser.id %>'>
         		<input hidden type="text" name="name" value="<%= item.name %> ">
         		<button class="btn btn-primary" type="submit">Favorite <%= item.name %></button>

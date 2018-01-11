@@ -12,7 +12,7 @@ router.get('/login', function(req, res){
 
 //post login info on form 
 router.post('/login', passport.authenticate('local', {
-	successRedirect: '/prof/profile', 
+	successRedirect: '/favorites/profile', 
 	successFlash: 'Login Successful!',
 	failureRedirect: '/auth/login',
 	failureFlash : 'Invalid Credentials'
@@ -36,7 +36,7 @@ router.post('/signup', function(req, res, next){
 		if(wasCreated){
 			//goodjob, you didnt make a duplicate!
 			passport.authenticate('local', {
-				successRedirect: '/prof/profile',
+				successRedirect: '/favorites/profile',
 				successFlash: 'successfuly logged in'
 			})(req, res, next);
 		}

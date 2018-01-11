@@ -1,2 +1,5 @@
 <h2>Hey there, <%= currentUser.firstname %> !</h2>
 <hr>
+<% user.parks.forEach(function(item){ %>
+	<%= item.parkname %>
+<% }); %>

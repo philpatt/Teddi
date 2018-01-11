@@ -7,13 +7,19 @@ var router = express.Router();
 var isLoggedIn = require('../middleware/isloggedin');
 var request = require('request');
 
+// router.get('/profile', isLoggedIn, function(req, res){
+//   res.render('user/profile');
+// });
+
 //allows users indiviual park info to be accessed
-router.get('/', isLoggedIn, function(req,res){
+router.get('/profile', isLoggedIn, function(req,res){
+	// console.log('#####', user,'#######')
   db.user.findOne({
   	where: {id: req.user.id},
     include: [db.park]
   }).then(function(user){
-    res.render('user/profile', {user: user});
+  	console.log("################",user, "###########");
+    res.render('user/profile', { user: user});
   }).catch(function(err){
   	console.log('my error is', err);
   });
@@ -24,7 +30,7 @@ router.post('/', isLoggedIn, function(req, res) {
   console.log('find', req.user.id, req.body);
   db.park.findOrCreate({     
     where: { 
-      parkname: req.body.name,
+      parkname: req.body.name
      },
     defaults: {
       userId: req.user.id
@@ -32,9 +38,9 @@ router.post('/', isLoggedIn, function(req, res) {
   }).spread(function(park, wasCreated){
   	console.log('created park obj', park);
     if(wasCreated){
-      res.redirect('/results')
+      res.redirect('/favorites/profile')
     } else {
-      res.redirect('/results')
+      res.redirect('/favorites/profile')
     }
   }).catch(function(err){
     console.log('my error is ',err);
@@ -44,7 +50,10 @@ router.post('/', isLoggedIn, function(req, res) {
 
 //delete favorites
 
-
+// <hr>
+// <% user.parks.forEach(function(favPark){ %>
+// 	<%= favPark.name %>
+// <% }); %>
 
 
 
