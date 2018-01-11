@@ -4,13 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     parkname: DataTypes.STRING,
     apiId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER
-  }, {
-    classMethods: {
-      associate: function(models) {
+  });
+      park.associate = function(models) {
         // associations can be defined here
         models.park.belongsTo(models.user);
       }
-    }
-  });
   return park;
 };

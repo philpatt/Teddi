@@ -11,7 +11,7 @@ var async = require('async');
 
 
 // show page that is results of search
-router.get('/', function(req, res){
+router.get('/', isLoggedIn, function(req, res){
 	var qs ={
 		start: 1,
 		q: req.query.q || 'yellowstone',
@@ -32,53 +32,12 @@ router.get('/', function(req, res){
   });
 });
 
-router.post('/', function(req, res) {
-    console.log('find', req.body);
-    db.park.findOrCreate({     
-      where: {
-        parkname: req.body.name
-     }
-    }).spread(function(park, created){
-      async.forEach(user, function(c, callback){
-        db.user.findOrCreate({
-          where: { name: c }
-        }).spread(function(user, wasCreated){
-          if(user){
-          park.addCategory(user);
-        }
-          callback();
-        })
-      }, function(){
-        res.redirect('/');
-      })
-  });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 //delete favorites
+
+
 module.exports = router;
 
 

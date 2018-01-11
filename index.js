@@ -40,6 +40,7 @@ app.use('/auth', require('./controllers/auth'));
 app.use('/prof', require('./controllers/profile'));
 app.use('/userSearch', require('./controllers/search'));
 app.use('/search', require('./controllers/search'));
+app.use('/results', require('./controllers/results'));
 // app.use('/userResults', require('./controllers/results'));
 // app.use('/userShow', require('./controllers/show'));
 

@@ -45,3 +45,95 @@ app.listen(3000);
 // 		<% }); %>
 // 	</div>
 // </div> -->
+
+//  
+router.post("/", function(req, res){
+ console.log('find', req.body);
+ var category = [];
+ if(req.body.categories && req.body.categories.length > 0){
+  categories = req.body.categories.split(',');
+ }
+   db.project.findOrCreate({
+     where: {
+       name: req.body.name,
+       githubLink: req.body.githubLink,
+       deployedLink: req.body.deployedLink,
+       description: req.body.description
+     }
+   }).spread(function(project, created) {
+      if(categories.length > 0){
+        async.forEach(categories, function(c, callback){
+          // add the tag to the tag table
+          db.category.findOrCreate({
+            where: {name: c.trim()}
+          }).spread(function(category, wasCreated){
+            if(category){
+          //this part is what adds the relationship in the join table
+              project.addCategory(category);
+            }
+            // calling this function is like saying this is all done
+            callback();
+          })
+        }, function(){
+          // happens when all calls are resolved
+          res.redirect('/projects/' + project.id);
+
+        });
+      }
+      else{
+        res.redirect('/projects/' + project.id);
+      }
+   }); //end spread
+});
+
+
+
+
+
+
+
+
+
+
+
+
+    <% results.forEach(function(item) { %>
+	   	<ul>
+	       <h2><%= item.name %></h2>
+	        <form method="POST" action="/search">
+        		<input hidden type="text" name="name" value="<%= item.name %> ">
+        		<button class="btn btn-primary" type="submit">Favorite <%= item.name %></button>
+      		</form>
+	    </ul>
+    <% }); %>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
