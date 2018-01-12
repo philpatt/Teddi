@@ -51,6 +51,46 @@ router.post('/', isLoggedIn, function(req, res) {
   });
 });
 
+//delete favorited parks
+router.delete('/:id', function(req, res){
+  console.log('delete route. ID= ', req.params.id);
+  db.park.destroy({
+    where: {id: req.params.id}
+  }).then(function(deleted){
+    console.log('deleted = ', deleted);
+    res.send('sucesss');
+  }).catch(function(err){
+    console.log('An error happened', err);
+    res.send('fail');
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

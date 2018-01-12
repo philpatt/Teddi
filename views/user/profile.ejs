@@ -12,9 +12,11 @@
 				<input hidden name='parkCode' type="text" value="<%= item.parkCode %>">
 				<button type="text">More Details</button>
 			</form>
-		
+	   			<a href ='/favorites/<%= item.id %>' class='btn btn-danger delete-link'>remove from favorites</a>
+
+
 		</div>
-	<hr>
+		<hr>
 		<% }); %>
 </div>
 

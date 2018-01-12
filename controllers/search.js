@@ -33,11 +33,6 @@ router.get('/', isLoggedIn, function(req, res){
 
 
 
-
-
-//delete favorites
-
-
 module.exports = router;
 
 
