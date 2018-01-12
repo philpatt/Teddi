@@ -17,8 +17,14 @@
                 <input hidden type="text" name="parkCode" value="<%= item.parkCode%>">
                 <input hidden type="number"  name="entranceFeesCost" value='<%= item.entranceFees[0].cost %>'>
                 <input hidden type="text"  name="entranceFeesDesc" value='<%= item.entranceFees[0].description %>'>
-            	<button  class="btn btn-primary" type="submit">Favorite <%= item.name %> for more info!</button>
+            	<button  class="btn btn-primary" type="submit">add to profile <%= item.name %>!</button>
       		</form>
+            <form method="POST" id='search-form' action="/show/show">
+                <input hidden type="text" name="parkname" value="<%= item.parkname %>">
+                <input hidden name='parkCode' type="text" value="<%= item.parkCode %>">
+                <button type="text">More Details</button>
+            </form>
+
 	    </ul>
     <% }); %>
   </div>

@@ -1,2 +1,34 @@
-<h2><%=currentUser.firstname %>, i heard you are interested in more details</h2>
-<hr>
+<h2>So, 
+<%=currentUser.firstname%>, you want to know more info about <%=results.dbInfo.fullName%>...
+</h2>
+
+<div class="info-tab">
+	<div style="width:500px" id="dbInfo-tab">
+		<h3>Park Info: </h3>
+		<div class="tab-content">
+				<p>Entrance Fee Cost: $<%=results.dbInfo.entranceFeesCost%>, <%=results.dbInfo.entranceFeesDesc%></p>
+				<div id="weatherInfo">
+						<h5>Weather Info:</h5>
+						<p><%=results.dbInfo.weatherInfo%></p>
+				</div>
+				<div id="weatherInfo">
+						<h5>Directions:</h5>
+						<p><%=results.dbInfo.directionsInfo%></p>
+				</div>
+		</div>
+	</div>
+	<div style="width:500px" id="alertInfo-tab">
+		<h3 >teddi Alerts</h3>
+		<h4>Up-to-date cautionary information regularly from the National Park Service</h4>
+		<div class="tab-content">
+			<% results.data.forEach(function(item){ %>
+				<h5>Importance: <%=item.category %></h5>
+				<h5> <%=item.title %></h5>
+				<p> <%=item.description %></p>
+				<p>for more info <a href="<%= item.url %>">click here</a> </p>
+				<hr>
+			<% }); %>
+		</div>
+	</div>
+</div>
+

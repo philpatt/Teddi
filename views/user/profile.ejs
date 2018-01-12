@@ -6,11 +6,11 @@
 			<ul class='info well'>
 				<h3><%= item.fullName %></h3>
 				<p><%= item.description %></p>
-				<p><%= item.parkCode %></p>
 			</ul>
-			<form id='search-form' action="/show/show">
+			<form method="POST" id='search-form' action="/show/show">
+				<input hidden type="text" name="parkname" value="<%= item.parkname %>">
 				<input hidden name='parkCode' type="text" value="<%= item.parkCode %>">
-				<button type="text">More dDetails</button>
+				<button type="text">More Details</button>
 			</form>
 		
 		</div>
