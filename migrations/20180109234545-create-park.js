@@ -11,9 +11,6 @@ module.exports = {
       parkname: {
         type: Sequelize.STRING
       },
-      apiId: {
-        type: Sequelize.INTEGER
-      },
       userId: {
         type: Sequelize.INTEGER
       },
@@ -24,6 +21,24 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      fullName: {
+        type: Sequelize.STRING
+      },
+      directionsInfo: {
+        type: Sequelize.STRING
+      },
+      entranceFeesCost: {
+        type: Sequelize.STRING
+      },
+      entranceFeesDesc: {
+        type: Sequelize.STRING
+      },
+      description: {
+        type: Sequelize.STRING
+      },
+      weatherInfo: {
+        type: Sequelize.STRING
       }
     });
   },

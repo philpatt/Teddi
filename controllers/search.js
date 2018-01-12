@@ -17,7 +17,7 @@ router.get('/', isLoggedIn, function(req, res){
 		q: req.query.q || 'yellowstone',
 		api_key: process.env.API_KEY,
 		sort: 'name',
-		fields: 'images'
+		fields: 'images,entranceFees'
 	}
 	request({
 	    url: 'https://developer.nps.gov/api/v1/parks',
@@ -26,7 +26,7 @@ router.get('/', isLoggedIn, function(req, res){
   	// console.log(body);
     if (!error && response.statusCode == 200) {
       var dataObj = JSON.parse(body).data;
-      console.log(dataObj);
+      console.log('this is my data', dataObj);
       res.render('results',{ results: dataObj});
     }
   });

@@ -35,9 +35,9 @@ app.get('/', function(req,res){
 });
 
 //define controllers
-// localhost:3000/prof
+// localhost:3000/search
 
-app.use('/prof', require('./controllers/profile'));
+// app.use('/prof', require('./controllers/profile'));
 app.use('/search', require('./controllers/search'));
 app.use('/favorites', require('./controllers/favorites'));
 app.use('/auth', require('./controllers/auth'));

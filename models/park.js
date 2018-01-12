@@ -2,8 +2,13 @@
 module.exports = (sequelize, DataTypes) => {
   var park = sequelize.define('park', {
     parkname: DataTypes.STRING,
-    apiId: DataTypes.INTEGER,
-    userId: DataTypes.INTEGER
+    userId: DataTypes.INTEGER,
+ 	fullName: DataTypes.STRING,
+ 	directionsInfo: DataTypes.STRING,
+ 	entranceFeesCost: DataTypes.STRING,
+ 	entranceFeesDesc: DataTypes.STRING,
+ 	description: DataTypes.STRING,
+ 	weatherInfo: DataTypes.STRING
   });
       park.associate = function(models) {
         // associations can be defined here
