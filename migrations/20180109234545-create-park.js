@@ -39,6 +39,9 @@ module.exports = {
       },
       weatherInfo: {
         type: Sequelize.STRING
+      },
+      parkCode: {
+        type: Sequelize.STRING
       }
     });
   },

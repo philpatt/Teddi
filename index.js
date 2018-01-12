@@ -38,6 +38,7 @@ app.get('/', function(req,res){
 // localhost:3000/search
 
 // app.use('/prof', require('./controllers/profile'));
+app.use('/show', require('./controllers/show'));
 app.use('/search', require('./controllers/search'));
 app.use('/favorites', require('./controllers/favorites'));
 app.use('/auth', require('./controllers/auth'));

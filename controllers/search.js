@@ -6,7 +6,6 @@ var db = require('../models');
 var router = express.Router();
 var isLoggedIn = require('../middleware/isloggedin');
 var request = require('request');
-var async = require('async');
 
 
 
@@ -31,6 +30,30 @@ router.get('/', isLoggedIn, function(req, res){
     }
   });
 });
+
+//get access to alert api
+
+
+
+// router.get('/', isLoggedIn, function(req, res){
+// 	var qs ={
+// 		start: 1,
+// 		q: req.query.q || 'yellowstone',
+// 		api_key: process.env.API_KEY,
+// 		sort: 'name',
+// 	}
+// 	request({
+// 	    url: 'https://developer.nps.gov/api/v1/alerts',
+// 	    qs: qs
+// 	  }, function (error, response, body) {
+//   	// console.log(body);
+//     if (!error && response.statusCode == 200) {
+//       var dataObj = JSON.parse(body).data;
+//       console.log('this is my data', dataObj);
+//       res.render('show');
+//     }
+//   });
+// });
 
 
 

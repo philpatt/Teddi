@@ -1,32 +1,23 @@
 
-
-
-
-
-
-
-
-
-
-
 <h2>Search Results: </h2>
 <hr>
   <div class='text-center' style="width: 300px">
     <% results.forEach(function(item) { %>
 	   	<ul class="well">
 	       <h4 class="text-center"><%= item.name %></h4>
-	        <form method="POST" action="/favorites">
-             <input hidden type="text"  name="weatherInfo" value='<%= item.weatherInfo%>'>
-             <input hidden type="text"  name="description" value='<%= item.description%>'>
-             <input hidden type="text"  name="fullName" value='<%= item.fullName%>'>
-             <input hidden type="text"  name="directionsInfo" value='<%= item.directionsInfo%>'>
-             <input hidden type="text"  name="directionsUrl" value='<%= item.directions%>'>
-            <input hidden type="text"  name="userId" value='<%= currentUser.id %>'>
-        		<input hidden type="text" name="name" value="<%= item.name %> ">
-            <input hidden type="text" name="url" value=" <%= item.url%>">
-            <input hidden type="number"  name="entranceFeesCost" value='<%= item.entranceFees[0].cost %>'>
-            <input hidden type="text"  name="entranceFeesDesc" value='<%= item.entranceFees.description %>'>
-        		<button  class="btn btn-primary" type="submit">Favorite <%= item.name %> for more info!</button>
+    	       <form method="POST" action="/favorites">
+                <input hidden type="text"  name="weatherInfo" value='<%= item.weatherInfo%>'>
+                <input hidden type="text"  name="description" value='<%= item.description%>'>
+                <input hidden type="text"  name="fullName" value='<%= item.fullName%>'>
+                <input hidden type="text"  name="directionsInfo" value='<%= item.directionsInfo%>'>
+                <input hidden type="text"  name="directionsUrl" value='<%= item.directions%>'>
+                <input hidden type="text"  name="userId" value='<%= currentUser.id %>'>
+            	<input hidden type="text" name="name" value="<%= item.name %> ">
+                <input hidden type="text" name="url" value="<%= item.url%>">
+                <input hidden type="text" name="parkCode" value="<%= item.parkCode%>">
+                <input hidden type="number"  name="entranceFeesCost" value='<%= item.entranceFees[0].cost %>'>
+                <input hidden type="text"  name="entranceFeesDesc" value='<%= item.entranceFees[0].description %>'>
+            	<button  class="btn btn-primary" type="submit">Favorite <%= item.name %> for more info!</button>
       		</form>
 	    </ul>
     <% }); %>

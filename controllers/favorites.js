@@ -21,6 +21,7 @@ router.get('/profile', isLoggedIn, function(req,res){
   });
 });
 
+
 //posts users favorited parks to park database and associates with user
 router.post('/', isLoggedIn, function(req, res) {
   console.log('find', req.user.id, req.body);
@@ -35,7 +36,8 @@ router.post('/', isLoggedIn, function(req, res) {
       weatherInfo: req.body.weatherInfo,
       description: req.body.description,
       fullName: req.body.fullName,
-      directionsInfo: req.body.directionsInfo
+      directionsInfo: req.body.directionsInfo,
+      parkCode: req.body.parkCode
     }
   }).spread(function(park, wasCreated){
   	// console.log('created park obj', park);

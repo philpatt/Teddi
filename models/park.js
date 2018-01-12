@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
  	entranceFeesCost: DataTypes.STRING,
  	entranceFeesDesc: DataTypes.STRING,
  	description: DataTypes.STRING,
- 	weatherInfo: DataTypes.STRING
+ 	weatherInfo: DataTypes.STRING,
+ 	parkCode: DataTypes.STRING
   });
       park.associate = function(models) {
         // associations can be defined here
