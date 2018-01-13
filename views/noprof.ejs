@@ -1,0 +1,25 @@
+
+<h2>Search Results: </h2>
+<hr>
+  <div class='text-center' style="width: 300px">
+    <% results.forEach(function(item) { %>
+	   	<ul class="well">
+	       <h4 class="text-center"><%= item.name %></h4>
+	       <button  class="btn btn-primary" type="submit">add to profile <%= item.name %>!</button>
+	       <button type="text">More Details</button>
+	    </ul>
+    <% }); %>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

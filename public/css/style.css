@@ -1,6 +1,5 @@
 .info {
 	width: 500px;
-	/*height: 200px;*/
 	display: inline-block;
 	word-wrap: break-word;
 }
@@ -12,4 +11,37 @@
 .nav-link{
 	margin-top: 7px;
 	font-size: 16px;
+}
+input{
+  border:none;
+  padding:10px 0;
+  background:none;
+  color:black;
+  outline:none;
+  width:50%;
+  font-size:36px;
+  font-weight: 300;
+}
+.search-logo {
+    width:150px;
+    margin: 10px;
+    padding: 10px ;
+    border:5px solid black;
+    border-radius: 600px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+}
+.search-bar{
+	padding-top:100px;
+}
+#search{
+	height: 100px;
+	width: 75%;
+	display: inline;
+}
+.tDesc{
+	margin: 100px;
+}
+#tDesc{
+  	font-weight: 300;
 }
