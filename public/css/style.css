@@ -1,7 +1,32 @@
-.info {
-	width: 500px;
-	display: inline-block;
-	word-wrap: break-word;
+/*---------------------------------------------*/
+/*----------- layout styling -----------*/
+/*---------------------------------------------*/
+body{
+	background-color:#c6bcb6
+}
+.lay{
+	margin:2%;
+	text-align: center;
+}
+.container{
+	width: 100%;
+}
+
+/*---------------------------------------------*/
+/*----------- partials styling -----------*/
+/*---------------------------------------------*/
+
+
+/*----------- navbar styling -----------*/
+
+.navbar{
+	background-color: #96897f;
+	border: 1px solid #c6bcb6;
+	border-radius: 20px;
+}
+
+#nav a{
+	color: rgba(255,255,255,0.9);
 }
 #logo{
 	padding:10px 10px;
@@ -12,36 +37,267 @@
 	margin-top: 7px;
 	font-size: 16px;
 }
-input{
-  border:none;
-  padding:10px 0;
-  background:none;
-  color:black;
-  outline:none;
-  width:50%;
-  font-size:36px;
-  font-weight: 300;
+
+/*----------- alerts styling -----------*/
+
+.alert{
+	width:20%;
+}
+
+/*---------------------------------------------*/
+/*----------- homepage styling -----------*/
+/*---------------------------------------------*/
+
+#home{
+	height: 550px;
+	width: 90%;
+	background: url("/img/Bison-trPark.jpg") no-repeat center;
+	background-size: cover;
+	border: 1px solid black;
+	border-radius: 20px;
+	margin:0 auto;
+	/*margin-bottom: 2%;	*/
 }
 .search-logo {
     width:150px;
     margin: 10px;
     padding: 10px ;
-    border:5px solid black;
+    border:4px solid rgba(255,255,255,0.7);
     border-radius: 600px;
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
 }
 .search-bar{
 	padding-top:100px;
+	/*margin-right: 100px;*/
 }
 #search{
-	height: 100px;
-	width: 75%;
-	display: inline;
+	height: 100%;
+	width: 90%;
+	margin: 20px;
+}
+.search-input{
+	width: 55%;
+	padding:10px;
+	border: none;
+	background-color:rgba(0,0,0,0.1);
+	border-radius: 15px;
+	outline:none;
+	font-size:36px;
+	font-weight: 300;
+	padding-left: 20px;
+	color: rgba(255,255,255,0.9);
+}
+input::placeholder {
+  color: rgba(255,255,255,0.7);
 }
 .tDesc{
-	margin: 100px;
+	width: 100%;
+	margin: 30px;
+	/*text-align: center;*/
 }
 #tDesc{
+	width: 90%;
   	font-weight: 300;
+  	color: white;
 }
+/*---------------------------------------------*/
+/*----------- results page styling -----------*/
+/*---------------------------------------------*/
+#results-page{
+	height:575px;
+	width: 95%;
+	background-image: url("/img/teddi-vista.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 15px solid #625750; 
+	border-radius: 20px;
+  	text-align:center;
+  	display: inline-block;
+}
+h4{
+	color: rgb(4,46,100);
+}
+.col-xs-6{
+	height: 80%;
+}
+.results{
+	width: 50%;
+	border-radius: 20px;
+	text-align: center;
+	/*display: inline-block;*/
+}
+#results1{
+	overflow: scroll;
+	display: inline-block;
+
+}
+.block{
+	height: 60%;
+	background-color: rgba(255,255,255,0.6);
+	display: inline-block;
+	border: 8px solid #625750; 
+	border-radius: 10px;
+	margin: 10px;
+}
+p{
+	padding: 5px;
+}
+#results2{
+	padding-top: 150px;
+	display: inline-block;
+}
+.login,
+.signup{
+	width: 60%;
+	height: 20%;
+	opacity: 0.9;
+	margin-top: 8%;
+	border-radius: 15px;
+	font-size: 36px;
+	background-color:rgb(4,46,100)
+}
+
+
+/*---------------------------------------------*/
+/*----------- login page styling -----------*/
+/*---------------------------------------------*/
+.loginHeader{
+	color: white;
+	font-size: 48px;
+	justify-content: left;
+}
+.cont{
+	width: 100%;
+	display: inline-block;
+	background-image: url("/img/bye-son.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 15px solid #625750; 
+	padding-bottom: 15px;
+}
+#loginPage{
+	height:550px;
+	width: 40%;
+  	background-color: rgba(255,255,255,0.5);
+
+	border: 15px solid #625750; 
+	border-radius: 20px;
+  	text-align:center;
+  	display: inline-block;
+  	color: rgb(4,46,100);
+  	padding-top:80px;
+}
+#loginPage2{
+	height:550px;
+	width: 40%;
+	background-image: url("/img/tedd-laugh-sm.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 15px solid #625750; 
+	border-radius: 20px;
+  	text-align:center;
+  	display: inline-block;
+  	color: white;
+  	padding-top:80px;
+}
+
+#login{
+	width: 80%;
+	margin: auto;
+	display: inline-block;
+}
+.loginInput{
+  	opacity: 0.9;
+}
+.password{
+	margin-top:90px;
+}
+
+
+
+/*---------------------------------------------*/
+/*----------- sign up page styling -----------*/
+/*---------------------------------------------*/
+.signupHeader{
+	color: white;
+	font-size: 48px;
+	padding-right: 50px
+}
+.cont{
+	width: 100%;
+	display: inline-block;
+	background-image: url("/img/bye-son.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 15px solid #625750; 
+	padding-bottom: 15px;
+}
+#signupPage{
+	height:550px;
+	width: 40%;
+  	background-color: rgba(255,255,255,0.5);
+
+	border: 15px solid #625750; 
+	border-radius: 20px;
+  	text-align:center;
+  	display: inline-block;
+  	color: rgb(4,46,100);
+  	padding-top:80px;
+}
+#signupPage2{
+	height:550px;
+	width: 40%;
+	background-image: url("/img/tedd-laugh-sm.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 15px solid #625750; 
+	border-radius: 20px;
+  	text-align:center;
+  	display: inline-block;
+  	color: white;
+  	padding-top:80px;
+}
+
+#login{
+	width: 80%;
+	margin: auto;
+	display: inline-block;
+}
+.loginInput{
+  	opacity: 0.9;
+}
+.password{
+	margin-top:90px;
+}
+
+
+
+
+
+
+/*---------------------------------------------*/
+/*----------- profile page styling -----------*/
+/*---------------------------------------------*/
+
+
+
+/*---------------------------------------------*/
+/*----------- footer styling -----------*/
+/*---------------------------------------------*/
+
+#footer {
+bottom: 0;
+width: 100%;
+background-color: #96897f;
+border: 1px solid #c6bcb6;
+border-radius: 20px;
+color:rgba(255,255,255,0.5);
+position: relative;
+
+}
+.footer-block {
+  margin: 20px 0;
+}
+
+
+
+

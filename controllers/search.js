@@ -22,11 +22,7 @@ router.get('/', function(req, res){
 	    url: 'https://developer.nps.gov/api/v1/parks',
 	    qs: qs
 	  }, function (error, response, body) {
-	  	if (!currentUser && !error && response.statusCode == 200) {
-      		var dataObj = JSON.parse(body).data;
-      		console.log('this is my data', dataObj);
-      		res.render('noProf',{ results: dataObj});
-		} else if (currentUser && !error && response.statusCode == 200 ) {}{
+	  	if (!error && response.statusCode == 200 ) {}{
 			var dataObj = JSON.parse(body).data;
 			console.log('this is my data', dataObj);
 			res.render('results',{ results: dataObj});
