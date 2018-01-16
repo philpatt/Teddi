@@ -10,7 +10,7 @@ google fonts
 
 #sprint1
 began wireframing app
-![alt text](http://readme-img/NPS-wireframe.pdf)
+![alt text](http:///readme-img/NPS-wireframe.pdf)
 create trello board
 write index.js
 stub out routes
@@ -38,3 +38,4 @@ heroku deployment
 
 # Next Steps
 add another db to allow users to comment and tag each park
+add about me page
