@@ -10,7 +10,7 @@ google fonts
 
 #sprint1
 began wireframing app
-![alt text](http://project2/readme-img/NPS-wireframe.pdf)
+![alt text](/readme-img/NPS-wireframe.pdf)
 create trello board
 write index.js
 stub out routes
