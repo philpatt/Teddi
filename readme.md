@@ -7,10 +7,14 @@ node.js
 google fonts
 
 # Approach Taken
+
+#sprint1
 began wireframing app
+![alt text](http://readme-img/NPS-wireframe.pdf)
 create trello board
 write index.js
 stub out routes
+
 create db
 connect api to app
 save api information to db
