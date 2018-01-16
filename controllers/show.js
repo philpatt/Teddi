@@ -21,7 +21,6 @@ router.post("/show", isLoggedIn, function(req, res){
 	    	url: 'https://developer.nps.gov/api/v1/alerts',
 	    	qs: qs
 	  	}, function (error, response, body) {
-
     		if (!error && response.statusCode == 200) {
       			var alertInfo = JSON.parse(body);
       			alertInfo.dbInfo = info;

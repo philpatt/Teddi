@@ -2,11 +2,16 @@
 /*----------- layout styling -----------*/
 /*---------------------------------------------*/
 body{
-	background-color:#c6bcb6
+	/*width: 1000px;*/
+	height: 800px;
+	background-color:#c6bcb6;
+
 }
 .lay{
-	margin:2%;
+	height: 90%;
+	width: 100%;
 	text-align: center;
+
 }
 .container{
 	width: 100%;
@@ -49,13 +54,16 @@ body{
 /*---------------------------------------------*/
 
 #home{
-	height: 550px;
-	width: 90%;
+	height: 80%;
+	width: 80%;
 	background: url("/img/Bison-trPark.jpg") no-repeat center;
 	background-size: cover;
 	border: 1px solid black;
 	border-radius: 20px;
-	margin:0 auto;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
 	/*margin-bottom: 2%;	*/
 }
 .search-logo {
@@ -108,10 +116,10 @@ input::placeholder {
 	background-image: url("/img/teddi-vista.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 15px solid #625750; 
+	border: 2px solid #625750; 
 	border-radius: 20px;
   	text-align:center;
-  	display: inline-block;
+  	/*display: inline-block;*/
 }
 h4{
 	color: rgb(4,46,100);
@@ -123,28 +131,31 @@ h4{
 	width: 50%;
 	border-radius: 20px;
 	text-align: center;
-	/*display: inline-block;*/
 }
 #results1{
+	/*height: 100%;*/
+	width: 70%;
 	overflow: scroll;
-	display: inline-block;
-
+	/*display: inline-block;*/
+}
+#results2{
+	width: 25%;
+	padding-top: 150px;
 }
 .block{
-	height: 60%;
+	vertical-align: top;
+	height: 85%;
+	width: 25%;
 	background-color: rgba(255,255,255,0.6);
 	display: inline-block;
-	border: 8px solid #625750; 
+	border: 2px solid #625750; 
 	border-radius: 10px;
 	margin: 10px;
 }
 p{
 	padding: 5px;
 }
-#results2{
-	padding-top: 150px;
-	display: inline-block;
-}
+
 .login,
 .signup{
 	width: 60%;
@@ -153,7 +164,7 @@ p{
 	margin-top: 8%;
 	border-radius: 15px;
 	font-size: 36px;
-	background-color:rgb(4,46,100)
+	background-color:rgb(4,46,100);
 }
 
 
@@ -171,15 +182,14 @@ p{
 	background-image: url("/img/bye-son.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 15px solid #625750; 
+	border: 2px solid #625750; 
 	padding-bottom: 15px;
 }
 #loginPage{
 	height:550px;
 	width: 40%;
   	background-color: rgba(255,255,255,0.5);
-
-	border: 15px solid #625750; 
+	border: 2px solid #625750; 
 	border-radius: 20px;
   	text-align:center;
   	display: inline-block;
@@ -192,7 +202,7 @@ p{
 	background-image: url("/img/tedd-laugh-sm.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 15px solid #625750; 
+	border: 2px solid #625750; 
 	border-radius: 20px;
   	text-align:center;
   	display: inline-block;
@@ -222,7 +232,7 @@ p{
 	font-size: 48px;
 	padding-right: 50px
 }
-.cont{
+.signCont{
 	width: 100%;
 	display: inline-block;
 	background-image: url("/img/bye-son.jpg");
@@ -230,26 +240,29 @@ p{
 	background-size: cover;
 	border: 15px solid #625750; 
 	padding-bottom: 15px;
+	margin: 10px;
+	vertical-align: top;
+
 }
 #signupPage{
 	height:550px;
 	width: 40%;
   	background-color: rgba(255,255,255,0.5);
-
-	border: 15px solid #625750; 
+	border: 2px solid #625750; 
 	border-radius: 20px;
-  	text-align:center;
   	display: inline-block;
   	color: rgb(4,46,100);
   	padding-top:80px;
+
 }
 #signupPage2{
 	height:550px;
 	width: 40%;
-	background-image: url("/img/tedd-laugh-sm.jpg");
+	background-image: url("/img/ranger.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 15px solid #625750; 
+	opacity: 0.9;
+	border: 2px solid #625750; 
 	border-radius: 20px;
   	text-align:center;
   	display: inline-block;
@@ -257,27 +270,127 @@ p{
   	padding-top:80px;
 }
 
-#login{
+.input{
 	width: 80%;
 	margin: auto;
 	display: inline-block;
-}
-.loginInput{
   	opacity: 0.9;
 }
 .password{
 	margin-top:90px;
 }
 
-
-
-
-
-
 /*---------------------------------------------*/
 /*----------- profile page styling -----------*/
 /*---------------------------------------------*/
+.profileHeader{
+	color: white;
+	font-size: 48px;
+	padding-left:90px;
+}
+.profCont{
+	width: 100%;
+	display: inline-block;
+	background-image: url("/img/mt-rainier.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid #625750;
+	border-radius: 20px;
+	margin: 5px; 
+	padding-bottom: 15px;
+}
+#profilePage{
+	height:550px;
+	width: 80%;
+  	background-color: rgba(255,255,255,0.5);
+	border: 2px solid #625750; 
+	border-radius: 20px;
+  	text-align:center;
+  	display: inline-block;
+  	color: rgb(4,46,100);
+  	padding-top:80px;
+  	overflow: scroll;
+}
+#profilePage2{
+	height:550px;
+	width: 60%;
+	background-image: url("/img/tedd-laugh-sm.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid #625750; 
+	border-radius: 20px;
+  	text-align:center;
+  	display: inline-block;
+  	color: white;
+  	padding-top:80px;
+}
 
+#profile{
+	width: 80%;
+	margin: auto;
+}
+.info{
+	vertical-align: top;
+	height: 85%;
+	width: 20%;
+	padding: 10px;
+	background-color: rgba(255,255,255,0.6);
+	display: inline-block;
+	border: 2px solid #625750; 
+	border-radius: 10px;
+	margin: 10px;
+}
+.profBtn{
+	color: white;
+	margin: 10px;
+	width: 50%;
+	background-color:rgb(4,46,100);
+}
+.delete-link{
+	color: red;
+	border: 3px solid red;
+}
+
+
+
+
+/*---------------------------------------------*/
+/*----------- show page styling -----------*/
+/*---------------------------------------------*/
+.showHeader{
+	color: white;
+	font-size: 48px;
+	width: 90%;
+	margin:auto;
+}
+.showCont{
+	width: 100%;
+	height: 80%;
+	background-image: url("/img/mt-rainier.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid #625750;
+	border-radius: 20px;
+	margin: 5px; 
+	padding: 50px;
+}
+
+.showInfo{
+	vertical-align:top;
+	height: 90%;
+	width: 30%;
+	padding: 10px;
+	background-color: rgba(255,255,255,0.6);
+	display: inline-block;
+	border: 2px solid #625750; 
+	border-radius: 10px;
+	margin: 10px;
+	overflow: scroll;
+}
+.show-del{
+	border: 3px solid red;
+	color:white
+}
 
 
 /*---------------------------------------------*/
@@ -285,13 +398,13 @@ p{
 /*---------------------------------------------*/
 
 #footer {
-bottom: 0;
+padding-bottom: 0;
 width: 100%;
 background-color: #96897f;
 border: 1px solid #c6bcb6;
 border-radius: 20px;
 color:rgba(255,255,255,0.5);
-position: relative;
+position:relative ;
 
 }
 .footer-block {

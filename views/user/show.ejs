@@ -1,36 +1,33 @@
-<h2>So, 
-<%=currentUser.firstname%>, you want to know more info about <%=results.dbInfo.fullName%>...
-</h2>
-
-<div class="info-tab">
-	<div style="width:500px" id="dbInfo-tab">
-		<h3>Park Info: </h3>
-		<div class="tab-content">
-				<p>Entrance Fee Cost: $<%=results.dbInfo.entranceFeesCost%>, <%=results.dbInfo.entranceFeesDesc%></p>
-				<div id="weatherInfo">
-						<h5>Weather Info:</h5>
-						<p><%=results.dbInfo.weatherInfo%></p>
-				</div>
-				<div id="weatherInfo">
-						<h5>Directions:</h5>
-						<p><%=results.dbInfo.directionsInfo%></p>
-				</div>
+<header class="text-center showHeader">More information about <%=results.dbInfo.fullName%>...</header>
+		<div class="showCont row">
+			<div class='col-xs-6 showInfo'>
+				<h2>Weather Info</h2>
+				<p><%=results.dbInfo.weatherInfo%></p>
+			</div>
+			<div class='col-xs-6 showInfo'>
+				<h2>Directions</h2>
+				<p><%=results.dbInfo.directionsInfo%></p>
+			</div>
+			<div class='col-xs-6 showInfo'>
+				<h2 style='color:red'>teddi Alerts</h2>
+				<% results.data.forEach(function(item){ %>
+					<%if(item.title === ''){ %>
+						<h5>No alerts contact NPS for information</h5>
+					<% } else { %>
+						<h5 style="color:red">Importance: <%=item.category %></h5>
+						<h5> <%=item.title %></h5>
+						<p> <%=item.description %></p>
+						<p>for more info <a href="<%= item.url %>">click here</a> </p>
+						<hr>
+					<%}%>
+				<% }); %>
+			</div>
+			<a href ='/favorites/<%= results.dbInfo.id %>' class='show-del btn btn-danger delete-link '>remove from favorites</a>
 		</div>
-	</div>
-	<div style="width:500px" id="alertInfo-tab">
-		<h3 >teddi Alerts</h3>
-		<h4>Up-to-date cautionary information regularly from the National Park Service</h4>
-		<div class="tab-content">
-			<% results.data.forEach(function(item){ %>
-				<h5>Importance: <%=item.category %></h5>
-				<h5> <%=item.title %></h5>
-				<p> <%=item.description %></p>
-				<p>for more info <a href="<%= item.url %>">click here</a> </p>
-				<hr>
-			<% }); %>
 
-		</div>
-	</div>
-<a href ='/favorites/<%= results.dbInfo.id %>' class='btn btn-danger delete-link'>remove from favorites</a>
-</div>
+
+
+
+
+
 
