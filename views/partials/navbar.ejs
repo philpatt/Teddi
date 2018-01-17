@@ -18,12 +18,18 @@
 			<ul class="nav navbar-nav navbar-right" id="nav">
 				<% if(!currentUser){ %>
 				<li>
+					<a class='nav-link' href="/">Search Parks</a>
+				</li>
+				<li>
 					<a class='nav-link' href="/auth/login">login</a>
 				</li>
 				<li>
 					<a class='nav-link' href="/auth/signup">sign up</a>
 				</li>
 				<% } else { %>
+				<li>
+					<a class='nav-link' href="/">Search Parks</a>
+				</li>
 				<li>
 					<a class='nav-link' href="/favorites/profile">
 						<%=currentUser.firstname %></a>

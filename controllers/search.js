@@ -15,8 +15,8 @@ router.get('/', function(req, res){
 		start: 1,
 		q: req.query.q || 'Rainier',
 		api_key: process.env.API_KEY,
-		sort: 'name',
-		fields: 'entranceFees'
+		fields: 'stateCode',
+		sort: 'name'
 	}
 	request({
 	    url: 'https://developer.nps.gov/api/v1/parks',

@@ -1,29 +1,51 @@
 <header class="text-center showHeader">More information about <%=results.dbInfo.fullName%>...</header>
-		<div class="showCont row">
-			<div class='col-xs-6 showInfo'>
-				<h2>Weather Info</h2>
-				<p><%=results.dbInfo.weatherInfo%></p>
-			</div>
-			<div class='col-xs-6 showInfo'>
-				<h2>Directions</h2>
-				<p><%=results.dbInfo.directionsInfo%></p>
-			</div>
-			<div class='col-xs-6 showInfo'>
-				<h2 style='color:red'>teddi Alerts</h2>
-				<% results.data.forEach(function(item){ %>
-					<%if(item.title === ''){ %>
-						<h5>No alerts contact NPS for information</h5>
-					<% } else { %>
-						<h5 style="color:red">Importance: <%=item.category %></h5>
-						<h5> <%=item.title %></h5>
-						<p> <%=item.description %></p>
-						<p>for more info <a href="<%= item.url %>">click here</a> </p>
-						<hr>
-					<%}%>
-				<% }); %>
-			</div>
+<div class="showCont row">
+	<div class='col-xs-6 showInfo'>
+		<h2>Weather Info</h2>
+		<p><%=results.dbInfo.weatherInfo%></p>
+	</div>
+	<div class='col-xs-6 showInfo'>
+		<h2>Directions</h2>
+		<p><%=results.dbInfo.directionsInfo%></p>
+	</div>
+	<div class='col-xs-6 showInfo'>
+		<h2 style='color:red'>teddi Alerts</h2>
+		<% results.data.forEach(function(item){ %>
+			<%if(item.title === ''){ %>
+				<h5>No alerts contact NPS for information</h5>
+			<% } else { %>
+				<h5 style="color:red">Importance: <%=item.category %></h5>
+				<h5> <%=item.title %></h5>
+				<p> <%=item.description %></p>
+				<p>for more info <a href="<%= item.url %>">click here</a> </p>
+				<hr>
+			<%}%>
+		<% }); %>
+	</div>
+</div>
+
+<div class="row">
+	<div class='col-xs-6 showInfo'>
+		<h1>Park Comments:</h1>
+		<form action="/projects" method="POST">
+		  <div class="form-group">
+		    <label for="name">Name</label>
+		    <input type="text" class="form-control" id="name" name="name" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="description">Comment:</label>
+		    <textarea type="text" class="form-control" id="description" name="description" required></textarea>
+		  </div>
+		  <input type="submit" class="btn btn-primary">
+		</form>
+	</div>
+	<div class='col-xs-6 showInfo'>
+			<h2>see comments here</h2>
+	</div>
+</div>
+
 			<a href ='/favorites/<%= results.dbInfo.id %>' class='show-del btn btn-danger delete-link '>remove from favorites</a>
-		</div>
+
 
 
 
