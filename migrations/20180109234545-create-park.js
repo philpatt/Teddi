@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       parkname: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       userId: {
         type: Sequelize.INTEGER
@@ -41,7 +41,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       parkCode: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       }
     });
   },
