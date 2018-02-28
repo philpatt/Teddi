@@ -4,19 +4,24 @@
     </div>
     <% if(!currentUser){ %>
         <div class='col-xs-6' class="results" id="results1">
+        <% if(results){ %>
+            
             <% results.forEach(function(item) { %>
                 <div class='block'>
                        <h4 ><%= item.name %></h4>
                        <p><%= item.description %></p>        
                 </div>
             <% }); %> 
+        <% } %>
         </div>
         <div class='col-xs-6' class="results" id="results2">
             <a href="auth/login"><button class="login btn btn-success">login</button></a>
             <a href="auth/signup"><button class="signup btn-warning">sign up</button></a>
         </div>
+
      <% } else { %>
         <div class='col-xs-6' class="results" id="results1">
+        <% if(results){ %>            
             <% results.forEach(function(item) { %>
                 <div class="block" style="width: 300px">
                    <h4><%= item.name %></h4>
@@ -34,7 +39,8 @@
                         <button  class="fav btn btn-primary" type="submit">add to favorites!</button>
                     </form> 
                 </div>
-             <% }); %>
+            <% }); %>
+        <% } %>
         </div>
         <div class='col-xs-6' class="results" id="results2"></div>
     <% } %> 
