@@ -8,35 +8,34 @@
 				<span class='icon-bar'></span>
 				<span class='icon-bar'></span>
 			</button>
-			<a class="logo" href="/">
-				<img id="logo" src="/img/logo.png" alt="logo">
-			</a>
-
 		</div>
 		<!-- define links in navbar -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav navbar-right" id="nav">
+			<ul class="nav navbar-nav" id="nav">
+				<a class="logo" href="/">
+					<img id="logo" src="/img/logo.png" alt="logo">
+				</a>
 				<% if(!currentUser){ %>
-				<li>
-					<a class='nav-link' href="/">Search Parks</a>
-				</li>
-				<li>
-					<a class='nav-link' href="/auth/login">login</a>
-				</li>
-				<li>
-					<a class='nav-link' href="/auth/signup">sign up</a>
-				</li>
+					<li>
+						<a class='nav-link' href="/">Search Parks</a>
+					</li>
+					<li>
+						<a class='nav-link' href="/auth/login">login</a>
+					</li>
+					<li>
+						<a class='nav-link' href="/auth/signup">sign up</a>
+					</li>
 				<% } else { %>
-				<li>
-					<a class='nav-link' href="/">Search Parks</a>
-				</li>
-				<li>
-					<a class='nav-link' href="/favorites/profile">
-						<%=currentUser.firstname %></a>
-				</li>
-				<li>
-					<a class='nav-link' href="/auth/logout">logout, <%= currentUser.firstname %>?</a>
-				</li>
+					<li>
+						<a class='nav-link' href="/">Search Parks</a>
+					</li>
+					<li>
+						<a class='nav-link' href="/favorites/profile">
+							<%=currentUser.firstname %></a>
+					</li>
+					<li>
+						<a class='nav-link' href="/auth/logout">logout, <%= currentUser.firstname %>?</a>
+					</li>
 				<% }; %> 
 			</ul>
 		</div>
