@@ -1,48 +1,63 @@
 <header class="header">Search Results</header>
+<section>
     <div id='results-page'>
         <div class="row">
             <% if(!currentUser){ %>
                 <div class='col-xs-12' class="results" id="results1">
-                <% if(results){ %>
-                    <% results.forEach(function(item) { %>
-                        <div class='block'>
-                            <h4 ><%= item.name %></h4>
-                            <p><%= item.description %></p>        
-                        </div>
-                    <% }); %> 
-                <% } %>
+                    <% if(results){ %>
+                        <% results.forEach(function(item) { %>
+                            <div class='block'>
+                                <h4>
+                                    <%= item.name %>
+                                </h4>
+                                <p>
+                                    <%= item.description %>
+                                </p>
+                            </div>
+                            <% }); %>
+                                <% } %>
                 </div>
                 <div class='col-xs-12' class="results" id="results2">
-                    <a href="auth/login"><button class="login btn btn-success">login</button></a>
-                    <a href="auth/signup"><button class="signup btn-warning">sign up</button></a>
+                    <a href="auth/login">
+                        <button class="login btn btn-success">login</button>
+                    </a>
+                    <a href="auth/signup">
+                        <button class="signup btn-warning">sign up</button>
+                    </a>
                 </div>
-            <% } else { %>
-                <div class='col-xs-6' class="results" id="results1">
-                <% if(results){ %>            
-                    <% results.forEach(function(item) { %>
-                        <div class="block" style="width: 300px">
-                        <h4><%= item.name %></h4>
-                        <p><%= item.description %></p>   
-                        <form method="POST" action="/favorites">
-                                <input hidden type="text" name="weatherInfo" value='<%= item.weatherInfo%>'>
-                                <input hidden type="text" name="description" value='<%= item.description%>'>
-                                <input hidden type="text" name="fullName" value='<%= item.fullName%>'>
-                                <input hidden type="text" name="directionsInfo" value='<%= item.directionsInfo%>'>
-                                <input hidden type="text" name="directionsUrl" value='<%= item.directions%>'>
-                                <input hidden type="text" name="userId" value='<%= currentUser.id %>'>
-                                <input hidden type="text" name="name" value="<%= item.name %> ">
-                                <input hidden type="text" name="url" value="<%= item.url%>">
-                                <input hidden type="text" name="parkCode" value="<%= item.parkCode%>">
-                                <button  class="fav btn btn-primary" type="submit">add to favorites!</button>
-                            </form> 
-                        </div>
-                    <% }); %>
-                <% } %>
-                </div>
-                <div class='col-xs-6' class="results" id="results2"></div>
-            <% } %> 
+                <% } else { %>
+                    <div class='col-xs-6' class="results" id="results1">
+                        <% if(results){ %>
+                            <% results.forEach(function(item) { %>
+                                <div class="block" style="width: 300px">
+                                    <h4>
+                                        <%= item.name %>
+                                    </h4>
+                                    <p>
+                                        <%= item.description %>
+                                    </p>
+                                    <form method="POST" action="/favorites">
+                                        <input hidden type="text" name="weatherInfo" value='<%= item.weatherInfo%>'>
+                                        <input hidden type="text" name="description" value='<%= item.description%>'>
+                                        <input hidden type="text" name="fullName" value='<%= item.fullName%>'>
+                                        <input hidden type="text" name="directionsInfo" value='<%= item.directionsInfo%>'>
+                                        <input hidden type="text" name="directionsUrl" value='<%= item.directions%>'>
+                                        <input hidden type="text" name="userId" value='<%= currentUser.id %>'>
+                                        <input hidden type="text" name="name" value="<%= item.name %> ">
+                                        <input hidden type="text" name="url" value="<%= item.url%>">
+                                        <input hidden type="text" name="parkCode" value="<%= item.parkCode%>">
+                                        <button class="fav btn btn-primary" type="submit">add to favorites!</button>
+                                    </form>
+                                </div>
+                                <% }); %>
+                                    <% } %>
+                    </div>
+                    <div class='col-xs-6' class="results" id="results2"></div>
+                    <% } %>
         </div>
-</div>
+    </div>
+</section>
+
 
 
 
