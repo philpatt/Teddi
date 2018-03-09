@@ -31,12 +31,9 @@ body{
 #logo{
 	padding:10px 10px;
 	height:60px;
-	float: left;
+	/* float: left; */
 }
-.nav-link{
-	margin-top: 7px;
-	font-size: 16px;
-}
+
 
 /*----------- alerts styling -----------*/
 
