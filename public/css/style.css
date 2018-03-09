@@ -4,14 +4,15 @@
 
 html,
 body{
-	/*width: 1000px;*/
-	height: 100%;
+	padding: 0 !important;
 	background-color:#c6bcb6;
-
 }
 .container{
 	width: 100%;
-	padding: 0;
+	height: 80%;
+}
+section {
+	width: 100%;
 }
 
 /*---------------------------------------------*/
@@ -20,9 +21,14 @@ body{
 
 
 /*----------- navbar styling -----------*/
+nav {
+	padding: 0 !important;
+	
+}
 
 .navbar{
 	background-color: #96897f;
+	
 }
 
 #nav a{
@@ -31,9 +37,12 @@ body{
 #logo{
 	padding:10px 10px;
 	height:60px;
-	/* float: left; */
+	float: left;
 }
-
+.nav-link{
+	margin-top: 7px;
+	font-size: 16px;
+}
 
 /*----------- alerts styling -----------*/
 
@@ -44,17 +53,14 @@ body{
 /*---------------------------------------------*/
 /*----------- homepage styling -----------*/
 /*---------------------------------------------*/
-.header{
-
+.header {
 	color: white;
 	font-size: 36px;
 }
 
-#home{
+#home {
 	background: url("/img/Bison-trPark.jpg") no-repeat center;
 	background-size: cover;
-	/* border: 1px solid black; */
-	/* border-radius: 20px; */
 	margin: 50px;
 }
 .search-logo {
@@ -390,22 +396,33 @@ p{
 /*---------------------------------------------*/
 
 #footer {
+	padding: 0 !important;
+	margin: 0 !important;	
+	width: 100%;
 	background-color: #96897f;
-	border: 1px solid #c6bcb6;
-	color:rgba(255,255,255,0.5);
+	color:rgba(255,255,255,0.5) !important;
 	height: 75px;
+	position: relative;
+
+}
+.footer-text { 
 	padding: 30px 0 0 0;
-	position: absolute;
-	margin-top: 100px;
 }
 
+.footer-text h4{
+	color:rgba(255,255,255,0.5);	
+
+}
 
 
 
 
 /* media query */
 @media (max-width: 768px) {
-	body{
+	body {
 		background-color:red;
+	}
+	#footer {
+
 	}
 }
