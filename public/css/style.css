@@ -414,7 +414,9 @@ p{
 	background-color: #96897f;
 	color:rgba(255,255,255,0.5) !important;
 	height: 75px;
-	position: sticky;
+	position: absolute;
+	bottom: 0;
+
 
 }
 .footer-text { 
