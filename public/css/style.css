@@ -10,8 +10,6 @@ body{
 }
 .container{
 	width: 100%;
-	height: auto;
-	
 }
 .container-fluid {
 	padding: 0 !important;
@@ -29,28 +27,31 @@ section {
 
 /*----------- navbar styling -----------*/
 nav {
-	padding: 0 !important;
+	width: 100%;
 	margin: 0 !important;
-	
+}
+.nav-link{
+	margin-top: 0px;
+	font-size: 16px;
+}
+#nav {
+	width: auto;
 }
 
 .navbar{
 	background-color: #96897f;
-	
+	display: inline-block !important;	
 }
 
 #nav a{
 	color: rgba(255,255,255,0.9);
 }
 #logo{
-	padding:10px 10px;
+	padding:10px;
 	height:60px;
 	float: left;
 }
-.nav-link{
-	margin-top: 7px;
-	font-size: 16px;
-}
+
 
 /*----------- alerts styling -----------*/
 
