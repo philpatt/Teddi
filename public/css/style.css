@@ -153,67 +153,11 @@ results p{
 	background-color:rgb(4,46,100);
 }
 
-
 /*---------------------------------------------*/
-/*----------- login page styling -----------*/
+/*----------- login/sign up page styling -----------*/
 /*---------------------------------------------*/
-.loginHeader{
-	color: white;
-	font-size: 48px;
-	justify-content: left;
-}
-.cont{
-	width: 100%;
-	display: inline-block;
-	background-image: url("/img/bye-son.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 2px solid #625750; 
-	padding-bottom: 15px;
-}
-#loginPage{
-	height:550px;
-	width: 40%;
-  	background-color: rgba(255,255,255,0.5);
-	border: 2px solid #625750; 
-	border-radius: 20px;
-  	text-align:center;
-  	display: inline-block;
-  	color: rgb(4,46,100);
-  	padding-top:80px;
-}
-#loginPage2{
-	height:550px;
-	width: 100%;
-	background-image: url("/img/tedd-laugh-sm.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 2px solid #625750; 
-	border-radius: 20px;
-  	text-align:center;
-  	display: inline-block;
-  	color: white;
-  	padding-top:80px;
-}
 
-#login{
-	width: 80%;
-	margin: auto;
-	display: inline-block;
-}
-.loginInput{
-  	opacity: 0.9;
-}
-.password{
-	margin-top:90px;
-}
-
-
-
-/*---------------------------------------------*/
-/*----------- sign up page styling -----------*/
-/*---------------------------------------------*/
-#signUp {
+#signUpLogIn {
 	/* margin: 0 !important; */
 	height: 650px;
 	padding: 10px;
@@ -241,12 +185,9 @@ results p{
 
 }
 .input{
-	display: inline-block;
   	opacity: 0.9;
 }
-.password{
-	margin-top:90px;
-}
+
 
 /*---------------------------------------------*/
 /*----------- profile page styling -----------*/
