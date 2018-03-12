@@ -47,18 +47,30 @@
                     </a>
                 </div>
             </div>
-            <% } else { %>
-                <div class="row"> 
-                    <div class='col-xs-6' class="results" id="results1">
-                        <% if(results){ %>
-                            <% results.forEach(function(item) { %>
-                                <div class="block" style="width: 300px">
+        <% } else { %>
+            <div class="row hidden-sm hidden-md hidden-lg">
+                <div class='col-xs-12 ' class="results" id="results2">
+                    <a href="auth/login">
+                        <button class="login btn btn-success">login</button>
+                    </a>
+                    <a href="auth/signup">
+                        <button class="signup btn-warning">sign up</button>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-xs-12 col-sm-offset-1 col-sm-7' id="results1">
+                    <% if(results){ %>
+                        <% results.forEach(function(item) { %>
+                            <div class="result-content col-xs-12 col-sm-4">
+                                <div class='results col-xs-12 col-sm-12'>
                                     <h4>
                                         <%= item.name %>
                                     </h4>
                                     <p>
                                         <%= item.description %>
                                     </p>
+                                </div>
                                     <form method="POST" action="/favorites">
                                         <input hidden type="text" name="weatherInfo" value='<%= item.weatherInfo%>'>
                                         <input hidden type="text" name="description" value='<%= item.description%>'>
@@ -71,13 +83,26 @@
                                         <input hidden type="text" name="parkCode" value="<%= item.parkCode%>">
                                         <button class="fav btn btn-primary" type="submit">add to favorites!</button>
                                     </form>
-                                </div>
-                                <% }); %>
-                                    <% } %>
-                    </div>
-                    <div class='col-xs-6' class="results" id="results2"></div>
+
+                            </div>
+                        <% }); %>
                     <% } %>
-        </div>
+                    <% if(results == ''){  %>
+                        <h1 style="color:aqua">No Results !</h1>
+                        <a class='nav-link' href="/">Search for Parks</a>
+                    <% } %>
+                </div>
+                <div class='hidden-xs col-sm-4' class="results" id="results2">
+                    <a href="auth/login">
+                        <button class="login btn btn-success">login</button>
+                    </a>
+                    <a href="auth/signup">
+                        <button class="signup btn-warning">sign up</button>
+                    </a>
+                </div>
+            </div>
+         <% } %>
+
     </div>
 </section>
 

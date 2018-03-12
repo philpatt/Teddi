@@ -146,9 +146,9 @@ input::placeholder {
 	border: 3px solid black;
 }
 
-p{
+results p{
 	padding: 5px;
-	height: 100%;
+	height: auto;
 }
 
 .login,
