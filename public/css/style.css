@@ -121,50 +121,34 @@ input::placeholder {
 /*----------- results page styling -----------*/
 /*---------------------------------------------*/
 #results-page{
-	height:575px;
-	width: 95%;
-	background-image: url("/img/teddi-vista.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 2px solid #625750; 
-	border-radius: 20px;
-  	text-align:center;
-  	/*display: inline-block;*/
+	width: 100%;
+	text-align:center;
 }
-h4{
+
+#results-page h4{
 	color: rgb(4,46,100);
 }
-.col-xs-6{
-	height: 80%;
+.result-content {
+	padding: 5px;
 }
-.results{
-	width: 50%;
-	border-radius: 20px;
+.results {
 	text-align: center;
-}
-#results1{
-	/*height: 100%;*/
-	width: 70%;
-	overflow: scroll;
-	/*display: inline-block;*/
-}
-#results2{
-	width: 25%;
-	padding-top: 150px;
-}
-.block{
 	vertical-align: top;
-	height: 85%;
-	width: 25%;
-	padding: 1%;
 	background-color: rgba(255,255,255,0.6);
-	display: inline-block;
 	border: 2px solid #625750; 
-	border-radius: 10px;
-	margin: 10px;
+	margin: 1px;
+	height: 300px;
+	overflow: scroll;
 }
+#results1 {
+    height: 600px;
+	overflow: scroll;
+	border: 3px solid black;
+}
+
 p{
 	padding: 5px;
+	height: 100%;
 }
 
 .login,
@@ -209,7 +193,7 @@ p{
 }
 #loginPage2{
 	height:550px;
-	width: 40%;
+	width: 100%;
 	background-image: url("/img/tedd-laugh-sm.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -434,17 +418,31 @@ p{
 
 /* media query */
 @media (max-width: 768px) {
-	/* section {
-		height: auto;
-	} */
-
-	.search-bar {
-		
-	}
 	.search-input {
 		width: 100%;
 	}
 	.content {
 		margin: 0px;
+	}
+
+	/* Results page */
+	#results-page .row {
+		margin: 0;
+	}
+	.results{
+		display: block;
+		width: 100%;
+		margin: 5px 0;
+		padding: 10px;
+
+	}
+	#results2{
+		width: 100%;
+		padding-top: 0px;
+	}
+	.login, .signup {
+		width: 100%;
+		margin-top: 1px;
+		border-radius: 15px;
 	}
 }
