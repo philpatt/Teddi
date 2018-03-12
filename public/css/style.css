@@ -62,10 +62,6 @@ nav {
 /*---------------------------------------------*/
 /*----------- homepage styling -----------*/
 /*---------------------------------------------*/
-.header {
-	color: white;
-	font-size: 36px;
-}
 
 #home {
 	margin: 0 !important;
@@ -77,8 +73,6 @@ nav {
 	background-size: cover;
 	margin: 50px;
 	height: 100%;
-
-	
 }
 .search-logo {
     width:150px;
@@ -120,10 +114,7 @@ input::placeholder {
 /*---------------------------------------------*/
 /*----------- results page styling -----------*/
 /*---------------------------------------------*/
-#results-page{
-	width: 100%;
-	text-align:center;
-}
+
 
 #results-page h4{
 	color: rgb(4,46,100);
@@ -222,52 +213,34 @@ results p{
 /*---------------------------------------------*/
 /*----------- sign up page styling -----------*/
 /*---------------------------------------------*/
+#signUp {
+	/* margin: 0 !important; */
+	height: 650px;
+	padding: 10px;
+
+}
 .signupHeader{
 	color: white;
 	font-size: 48px;
-	padding-right: 50px
+
 }
 .signCont{
-	width: 100%;
-	display: inline-block;
 	background-image: url("/img/bye-son.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 15px solid #625750; 
-	padding-bottom: 15px;
-	margin: 10px;
-	vertical-align: top;
-
+	margin: 0 !important;
+	height: 100%;
 }
-#signupPage{
-	height:550px;
-	width: 40%;
+.signupPage{
+	height:auto;
   	background-color: rgba(255,255,255,0.5);
 	border: 2px solid #625750; 
-	border-radius: 20px;
   	display: inline-block;
   	color: rgb(4,46,100);
-  	padding-top:80px;
+  	padding: 20px;
 
 }
-#signupPage2{
-	height:550px;
-	width: 40%;
-	background-image: url("/img/ranger.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: 0.9;
-	border: 2px solid #625750; 
-	border-radius: 20px;
-  	text-align:center;
-  	display: inline-block;
-  	color: white;
-  	padding-top:80px;
-}
-
 .input{
-	width: 80%;
-	margin: auto;
 	display: inline-block;
   	opacity: 0.9;
 }
