@@ -6,9 +6,9 @@
     "operatorAliases": "false"
   },
   "test": {
-    "database": "database_test",
+    "database": "teddi",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "production": {
     "use_env_variable": "DATABASE_URL"
