@@ -18,22 +18,22 @@ module.exports = {
         type: Sequelize.STRING
       },
       directionsInfo: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       entranceFeesCost: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       entranceFeesDesc: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       weatherInfo: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       parkCode: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
