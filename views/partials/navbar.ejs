@@ -1,8 +1,10 @@
-<nav class="navbar navbar-default">
-	<div class="container">
+<nav class="navbar navbar-default" role="navigation">
+		<a class="navbar-brand" href="/">
+			<img class="logo" src="/img/logo.png" alt="logo">
+		</a>
 		<!-- mobile stuff -->
 		<div class='navbar-default'>
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class='sr-only'>Toggle navigation</span>
 				<span class='icon-bar'></span>
 				<span class='icon-bar'></span>
@@ -10,11 +12,8 @@
 			</button>
 		</div>
 		<!-- define links in navbar -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav" id="nav">
-				<a class="logo" href="/">
-					<img id="logo" src="/img/logo.png" alt="logo">
-				</a>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
 				<% if(!currentUser){ %>
 					<li>
 						<a class='nav-link' href="/">Search Parks</a>
@@ -30,14 +29,12 @@
 						<a class='nav-link' href="/">Search Parks</a>
 					</li>
 					<li>
-						<a class='nav-link' href="/favorites/profile">
-							<%=currentUser.firstname %></a>
+						<a class='nav-link' href="/favorites/profile"><%= currentUser.firstname.charAt(0).toUpperCase() + currentUser.firstname.slice(1); %></a>
 					</li>
 					<li>
-						<a class='nav-link' href="/auth/logout">logout, <%= currentUser.firstname %>?</a>
+						<a class='nav-link' href="/auth/logout">logout</a>
 					</li>
 				<% }; %> 
 			</ul>
 		</div>
-	</div>
 </nav>
