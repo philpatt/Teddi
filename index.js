@@ -19,7 +19,7 @@ app.use(session({
 	secret: process.env.SESSION_SECRET,
 	resave: false,
 	saveUninitialized: true
-}));
+}),option);
 app.use(express.static(__dirname + '/public'));
 app.use(flash());
 app.use(passport.initialize());
