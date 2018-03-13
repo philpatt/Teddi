@@ -3,7 +3,7 @@
 var bcrypt = require('bcrypt');
 
 module.exports = (sequelize, DataTypes) => {
-  var user = sequelize.define('users', {
+  var user = sequelize.define('user', {
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     email: {
@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
   user.associate = function(models) {
         // associations can be defined here
     models.user.hasMany(models.park);
-      }
+  }
 
   user.prototype.isValidPassword = function(passwordTyped){
     return bcrypt.compareSync(passwordTyped, this.password);
@@ -47,5 +47,5 @@ module.exports = (sequelize, DataTypes) => {
     delete user.password;
     return user; 
   }
-    return user;
+  return user;
 };
