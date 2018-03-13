@@ -10,12 +10,10 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     weatherInfo: DataTypes.STRING,
     parkCode: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+  park.associate = function (models) {
+    // associations can be defined here
+    models.park.belongsTo(models.user);
+  }
   return park;
 };
