@@ -38,11 +38,11 @@ module.exports = (sequelize, DataTypes) => {
     models.user.hasMany(models.park);
   }
 
-  User.prototype.isValidPassword = function(passwordTyped){
+  User.Instance.prototype.isValidPassword = function(passwordTyped){
     return bcrypt.compareSync(passwordTyped, this.password);
   }
 
-  User.prototype.toJson = function(){
+  User.Instance.prototype.toJson = function(){
     var user = this.get();
     delete user.password;
     return user;
