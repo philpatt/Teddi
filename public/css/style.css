@@ -19,7 +19,9 @@ section {
 	padding: 0 !important;
 	height: 640px;
 }
-
+.alert {
+	width: 100%;
+}
 /*---------------------------------------------*/
 /*----------- partials styling -----------*/
 /*---------------------------------------------*/
@@ -191,6 +193,8 @@ results p{
 }
 .profCont{
 	height: 100%;
+	margin: 50px;
+	
 	background-image: url("/img/mt-rainier.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;

@@ -4,11 +4,11 @@ module.exports = (sequelize, DataTypes) => {
     parkname: DataTypes.STRING,
     userId: DataTypes.INTEGER,
     fullName: DataTypes.STRING,
-    directionsInfo: DataTypes.STRING,
-    entranceFeesCost: DataTypes.STRING,
-    entranceFeesDesc: DataTypes.STRING,
-    description: DataTypes.STRING,
-    weatherInfo: DataTypes.STRING,
+    directionsInfo: DataTypes.TEXT,
+    entranceFeesCost: DataTypes.TEXT,
+    entranceFeesDesc: DataTypes.TEXT,
+    description: DataTypes.TEXT,
+    weatherInfo: DataTypes.TEXT,
     parkCode: DataTypes.STRING
   });
     park.associate = function(models) {
