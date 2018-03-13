@@ -16,10 +16,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(ejsLayouts);
 app.use(session({
-	secret: process.env.SESSION_SECRET,
+	secret: abc123,
 	resave: false,
 	saveUninitialized: true
-}),option);
+}));
 app.use(express.static(__dirname + '/public'));
 app.use(flash());
 app.use(passport.initialize());
