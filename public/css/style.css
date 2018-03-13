@@ -116,7 +116,7 @@ input::placeholder {
 /*---------------------------------------------*/
 
 
-#results-page h4{
+#results-page header{
 	color: rgb(4,46,100);
 }
 .result-content {
@@ -188,7 +188,6 @@ results p{
   	opacity: 0.9;
 }
 
-
 /*---------------------------------------------*/
 /*----------- profile page styling -----------*/
 /*---------------------------------------------*/
@@ -198,19 +197,14 @@ results p{
 	padding-left:90px;
 }
 .profCont{
-	width: 100%;
-	display: inline-block;
+	height: 100%;
 	background-image: url("/img/mt-rainier.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: 2px solid #625750;
-	border-radius: 20px;
-	margin: 5px; 
-	padding-bottom: 15px;
+	overflow: scroll;
 }
 #profilePage{
-	height:550px;
-	width: 80%;
   	background-color: rgba(255,255,255,0.5);
 	border: 2px solid #625750; 
 	border-radius: 20px;
@@ -259,9 +253,6 @@ results p{
 	color: red;
 	border: 3px solid red;
 }
-
-
-
 
 /*---------------------------------------------*/
 /*----------- show page styling -----------*/
