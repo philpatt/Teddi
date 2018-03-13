@@ -28,15 +28,17 @@ section {
 /*----------- navbar styling -----------*/
 nav {
 	width: 100%;
-	height: auto;
+	height: 75px;
 	margin: 0 !important;
 }
 .nav-link{
 	font-size: 16px;
 	color: rgba(255,255,255,0.9) !important;
+	padding-top:26px !important;
 }
 .navbar{
 	background-color: #96897f;
+	border: 0;
 }
 
 .logo{
