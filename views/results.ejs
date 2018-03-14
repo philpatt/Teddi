@@ -60,7 +60,6 @@
                                     <p>
                                         <%= item.description %>
                                     </p>
-                                </div>
                                     <form method="POST" action="/favorites">
                                         <input hidden type="text" name="weatherInfo" value='<%= item.weatherInfo%>'>
                                         <input hidden type="text" name="description" value='<%= item.description%>'>
@@ -73,7 +72,7 @@
                                         <input hidden type="text" name="parkCode" value="<%= item.parkCode%>">
                                         <button class="fav btn btn-primary" type="submit">add to favorites!</button>
                                     </form>
-
+                                </div>
                             </div>
                         <% }); %>
                     <% } %>
