@@ -17,7 +17,7 @@ body{
 section {
 	width: 100%;
 	padding: 0 !important;
-	height: 640px;
+	height: 650px;
 }
 .alert {
 	width: 100%;
@@ -115,7 +115,8 @@ input::placeholder {
 	color: rgb(4,46,100);
 }
 .result-content {
-	padding: 5px;
+	padding: 20px;git 
+	height: 100%;
 }
 .results {
 	text-align: center;
@@ -123,7 +124,7 @@ input::placeholder {
 	background-color: rgba(255,255,255,0.6);
 	border: 2px solid #625750; 
 	margin: 1px;
-	height: 300px;
+	height: 500px;
 	overflow: scroll;
 }
 #results1 {
@@ -186,6 +187,7 @@ results p{
 /*---------------------------------------------*/
 /*----------- profile page styling -----------*/
 /*---------------------------------------------*/
+
 .profileHeader{
 	color: white;
 	font-size: 48px;
