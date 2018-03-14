@@ -282,7 +282,7 @@ results p{
 
 /* media query */
 @media (max-width: 768px) {
-	.navbar-collapse{
+	.navbar-ex1-collapse{
 		margin-top: 73px;
 		background-color: rgb(150,137,127);
 
@@ -313,5 +313,9 @@ results p{
 		width: 100%;
 		margin-top: 1px;
 		border-radius: 15px;
+	}
+	/* profile page */
+	.profCont {
+		margin: 0px;
 	}
 }
