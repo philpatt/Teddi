@@ -3,13 +3,13 @@
 Be able to organize your adventures better! Teddi has up to date information on all of the United States National Parks. Sign up to save your favorite parks that you have been to or plan on going to and have all the information you need. 
 
 ## Technologies Used
-  *Node/Express  
-⋅⋅⋅*Key modules: 
-    ⋅⋅⋅*Passport / Bcrypt - Authentication and password hashing
-⋅⋅⋅*PostgreSQL
-⋅⋅⋅*Sequelize
-⋅⋅⋅*jQuery
-⋅⋅⋅*Bootstrap
+  * Node/Express
+    * Key modules: 
+        * Passport / Bcrypt - Authentication and password hashing
+  * PostgreSQL
+  * Sequelize
+  * jQuery
+  * Bootstrap
 
 jquery - bootstrap
 node.js
