@@ -58,8 +58,7 @@ If you'd like to set this project up on your own local server:
   * Run `sequelize db:migrate` to run migrations
 * Create .env file, which will need to include:
   * `SESSION_SECRET` (you determine this)
-  * `BASE_URL` (where you will deploy the site)
-  * `CLOUDINARY_URL` (from your Cloudinary account)
+  * `API_KEY` (from your NPS service account)
 
 ## Next Steps
 add another db to allow users to comment and tag each park
