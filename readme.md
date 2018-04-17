@@ -23,7 +23,7 @@ Be able to organize your adventures better! Teddi has up to date information on 
 
 
 * wireframe application
-![](/readme-img/NPS-wireframe.pdf)
+![wireframe pic](/public/img/readme-img/NPS-wireframe.pdf)
 create trello board
 write index.js
 stub out routes
