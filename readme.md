@@ -5,21 +5,25 @@ Be able to organize your adventures better! Teddi has up to date information on 
 ## Technologies Used
   * Node/Express
     * Key modules: 
-        * Passport / Bcrypt - Authentication and password hashing
+      * Passport / Bcrypt - Authentication and password hashing
   * PostgreSQL
   * Sequelize
   * jQuery
   * Bootstrap
 
-jquery - bootstrap
-node.js
-google fonts
-
 ## User Stories
 
-#sprint1
-began wireframing app
-![alt text](https://github.com/philpatt/project2/blob/master/readme-img/NPS-wireframe.pdf)
+## Sprints
+
+### Sprint 1
+
+### Sprint 2
+### Sprint 3
+### Sprint 4
+
+
+* wireframe application
+![](/readme-img/NPS-wireframe.pdf)
 create trello board
 write index.js
 stub out routes
@@ -37,8 +41,6 @@ using bootstrap (should have implemented bootstrap layout earlier in development
 Images from api were too large and took way too long to load
 
 
-# Fun Stuff
-Styling/finding pictures of teddi roosevelt 
 
 # Unsolved Problems
 Accessing more information from api (images)
