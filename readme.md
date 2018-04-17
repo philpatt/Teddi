@@ -2,8 +2,8 @@
 # <https://teddi.herokuapp.com/>
 Be able to organize your adventures better! Teddi has up to date information on all of the United States National Parks. Sign up to save your favorite parks that you have been to or plan on going to and have all the information you need. 
 Feel free to use this account:  
-**username** - theo@teddi.com  
-**password** - teddi123
+  **username** - _theo@teddi.com_  
+  **password** - _teddi123_  
 
 ## Technologies Used
   * Node/Express
@@ -15,8 +15,15 @@ Feel free to use this account:
   * Bootstrap
 
 ## User Stories
+The target user group for this app is those who are planning to do a trip to see any of the US National Park, and those who might have already travelled to see these parks and want to keep track of what they have seen. 
 
-## Sprints
+As a user, I want to be able to:
+  * Search through all of the national parks
+  * View more details about each park
+  * Save the park to my profile if it is one that interests me
+  * Also, delete anyone 
+
+## Aproach 
 
 ### *Sprint 1*
 * Wireframe application using draw.io
@@ -63,6 +70,8 @@ If you'd like to set this project up on your own local server:
   * `SESSION_SECRET` (you determine this)
   * `API_KEY` (from your NPS service account)
 
-## Next Steps
-add another db to allow users to comment and tag each park
-add about me page
+## Backlog
+* Give users ability to comment on the different parks
+* Allow users to have a more customized profile page (add profile picture)
+* Images to search results (web scrape wikipedia)
+* Like/dislike column -- star system
