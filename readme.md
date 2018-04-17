@@ -22,8 +22,13 @@ Be able to organize your adventures better! Teddi has up to date information on 
 ### Sprint 4
 
 
-* wireframe application
-![wireframe pic](/public/img/readme-img/NPS-wireframe.pdf)
+* wireframe application  
+![trello-1](/public/img/readme-img/trello-1.png)
+![trello-2](/public/img/readme-img/trello-2.png)
+![trello-3](/public/img/readme-img/trello-3.png)
+![trello-4](/public/img/readme-img/trello-4.png)
+
+
 create trello board
 write index.js
 stub out routes
