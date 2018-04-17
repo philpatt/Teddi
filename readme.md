@@ -16,14 +16,33 @@ Be able to organize your adventures better! Teddi has up to date information on 
 ## Sprints
 
 ### Sprint 1
+* Wireframe application using draw.io
+![trello-1](/public/img/readme-img/wireframe-1.png)  
 
-### Sprint 2
-### Sprint 3
-### Sprint 4
-
-
-* wireframe application  
+* Setup Trello Board
 ![trello-1](/public/img/readme-img/trello-1.png)
+
+* Add and populate gitignore file
+* Decide on technologies
+* Create models/associations in database
+* Basic folder structure
+* HTML for index.js filled out
+* Stub out routes
+* Empty ReadMe  
+
+### Sprint 2 
+
+* 
+
+![trello-1](/public/img/readme-img/trello-1.png)  
+
+
+### Sprint 3
+
+* 
+
+
+
 ![trello-2](/public/img/readme-img/trello-2.png)
 ![trello-3](/public/img/readme-img/trello-3.png)
 ![trello-4](/public/img/readme-img/trello-4.png)
