@@ -15,7 +15,7 @@ Be able to organize your adventures better! Teddi has up to date information on 
 
 ## Sprints
 
-### Sprint 1
+### *Sprint 1*
 * Wireframe application using draw.io
 ![trello-1](/public/img/readme-img/wireframe-1.png)  
 
@@ -24,53 +24,43 @@ Be able to organize your adventures better! Teddi has up to date information on 
 
 * Add and populate gitignore file
 * Decide on technologies
-* Create models/associations in database
+* Create database - models/associations
 * Basic folder structure
 * HTML for index.js filled out
 * Stub out routes
 * Empty ReadMe  
 
-### Sprint 2 
+### *Sprint 2* 
 
-* 
+* Add Basic styling
+* Reach MVP functionality
+  * Save api information to db
+* Deploy to heroku
 
-![trello-1](/public/img/readme-img/trello-1.png)  
+* Debug 
+![trello-1](/public/img/readme-img/trello-3.png)  
 
+### *Sprint 3*
 
-### Sprint 3
-
-* 
-
-
-
-![trello-2](/public/img/readme-img/trello-2.png)
-![trello-3](/public/img/readme-img/trello-3.png)
+* Finishing Touches
+* Advanced Styling
+* Fill out ReadMe
+* Begin strech goals
 ![trello-4](/public/img/readme-img/trello-4.png)
 
+## Steps to Setting Up
+If you'd like to set this project up on your own local server:
+* Fork and clone this repository
+* Run `npm install` to install dependencies
+  * Use `nodemon` to start your application
+* Setup your database (this app already has one existing model)
+  * Run `createdb teddi` to create the database
+  * Run `sequelize db:migrate` to run migrations
+* Create .env file, which will need to include:
+  * `SESSION_SECRET` (you determine this)
+  * `BASE_URL` (where you will deploy the site)
+  * `CLOUDINARY_URL` (from your Cloudinary account)
 
-create trello board
-write index.js
-stub out routes
-
-create db
-connect api to app
-save api information to db
-add more styling
-deploy to github
-deploy to heroku
-
-# Issues
-using bootstrap (should have implemented bootstrap layout earlier in development, this would have allowed me to approach mobile-first better)
-
-Images from api were too large and took way too long to load
-
-
-
-# Unsolved Problems
-Accessing more information from api (images)
-not as mobile-friendly as I would hope. 
-heroku deployment
-
-# Next Steps
+## Next Steps
 add another db to allow users to comment and tag each park
 add about me page
