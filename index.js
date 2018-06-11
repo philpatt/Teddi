@@ -20,6 +20,7 @@ app.use(session({
 	resave: false,
 	saveUninitialized: true
 }));
+
 app.use(express.static(__dirname + '/public'));
 app.use(flash());
 app.use(passport.initialize());
@@ -36,9 +37,8 @@ app.get('/', function(req,res){
 });
 
 //define controllers
-// localhost:3000/search
 
-// app.use('/prof', require('./controllers/profile'));
+app.use('/prof', require('./controllers/profile'));
 app.use('/show', require('./controllers/show'));
 app.use('/search', require('./controllers/search'));
 app.use('/favorites', require('./controllers/favorites'));

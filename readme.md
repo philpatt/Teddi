@@ -1,6 +1,7 @@
 # Teddi
 # <https://teddi.herokuapp.com/>
 Be able to organize your adventures better! Teddi has up to date information on all of the United States National Parks. Sign up to save your favorite parks that you have been to or plan on going to and have all the information you need.  
+
 Feel free to use this account:  
   **username** - _theo@teddi.com_  
   **password** - _teddi123_  

@@ -6,11 +6,13 @@ var db = require('../models');
 var router = express.Router();
 var isLoggedIn = require('../middleware/isloggedin');
 var request = require('request');
+var cheerio = require('cheerio');
 
 
 
 // show page that is results of search
 router.get('/', function(req, res){
+	
 	var qs ={
 		start: 1,
 		q: req.query.q || 'Rainier',
@@ -22,12 +24,28 @@ router.get('/', function(req, res){
 	    url: 'https://developer.nps.gov/api/v1/parks',
 	    qs: qs
 	  }, function (error, response, body) {
-	  	if (!error && response.statusCode == 200 ) {}{
+	  	if (!error && response.statusCode == 200 ){
+			var images = {};
 			var dataObj = JSON.parse(body).data;
-			console.log('this is my data', dataObj);
-			res.render('results',{ results: dataObj});
+			console.log(dataObj.length)
+			for (var i = 0; i < dataObj.length; i++) {
+				var fullName = dataObj[i].fullName
+
+				var wikiSearch = dataObj[i].fullName.split(' ').join('_');
+				console.log('https://en.wikipedia.org/wiki/'+wikiSearch)
+				request('https://en.wikipedia.org/wiki/' + wikiSearch, function (error, response, data) {
+					var $ = cheerio.load(data);
+					var imageSrc = $('#mw-content-text > div > table > tbody > tr > td > a > img').attr('src');
+					imageUrl = 'https:' + imageSrc
+					images[fullName] = imageUrl
+					console.log(images)
+					
+				})
+				
+			}
+			res.render('results',{ results: dataObj, images: images});
 		}
-	});
+	})
 });
 
 
