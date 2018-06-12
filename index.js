@@ -44,17 +44,13 @@ app.use('/auth', require('./controllers/auth'));
 
 
 
-// app.listen(process.env.PORT || 3000);
-const port = process.env.PORT || 3000 
-let server = app.listen(port, () => {
-	var host = server.address().address;
-	var port = server.address().port;
-	console.log('teddi is listening at http://'+host+port);
-}); 
+
+app.listen(process.env.PORT || 3000);
+
+module.exports = app;
 
 
 
-module.exports = server
 
 
 
