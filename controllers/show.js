@@ -7,7 +7,6 @@ var router = express.Router();
 var isLoggedIn = require('../middleware/isloggedin');
 var request = require('request');
 
-
 router.post("/:id", isLoggedIn, function(req, res){
   db.park.find({
   	where: {parkCode: req.body.parkCode}

@@ -8,11 +8,12 @@ body{
 	background-color:#c6bcb6;
 	height: 100%;
 }
-.container{
+/* .container{
 	width: 100%;
-}
+} */
 .container-fluid {
 	padding: 0 !important;
+	z-index: -1;
 }
 section {
 	width: 100%;
@@ -44,6 +45,7 @@ nav {
 	border: 0;
 }
 
+
 .logo{
 	height:50px;
 }
@@ -62,7 +64,6 @@ nav {
 #home {
 	margin: 0 !important;
 	text-align: center;
-	height: 650px;
 }
 .content {
 	background: url("/img/Bison-trPark.jpg") no-repeat center;
@@ -100,12 +101,11 @@ nav {
 input::placeholder {
   color: rgba(255,255,255,0.7);
 }
+
 .tDesc{
-	/*text-align: center;*/
-}
-#tDesc{
-  	font-weight: 300;
-  	color: white;
+	color: white;
+	padding: 75px;
+
 }
 /*---------------------------------------------*/
 /*----------- results page styling -----------*/
@@ -116,16 +116,15 @@ input::placeholder {
 	color: rgb(4,46,100);
 }
 .result-content {
-	padding: 20px;git 
+	padding: 20px;
 	height: 100%;
 }
 .results {
 	text-align: center;
 	vertical-align: top;
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgba(255,255,255,0.8);
 	border: 2px solid #625750; 
-	margin: 1px;
-	height: 500px;
+	padding: 25px;
 	overflow: scroll;
 }
 #results1 {
@@ -283,10 +282,12 @@ results p{
 
 /* media query */
 @media (max-width: 768px) {
+	section {
+		height: auto;
+	}
 	.navbar-collapse{
 		margin-top: 73px;
 		background-color: rgb(150,137,127);
-
 	}
 	.search-input {
 		width: 100%;
@@ -304,7 +305,6 @@ results p{
 		width: 100%;
 		margin: 5px 0;
 		padding: 10px;
-
 	}
 	#results2{
 		width: 100%;
