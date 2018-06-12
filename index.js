@@ -2,11 +2,8 @@
 require('dotenv').config();
 var bodyParser = require('body-parser');
 var express = require('express');
-var request = require('request');
 var ejsLayouts = require('express-ejs-layouts');
-var db = require('./models');
 var flash = require('connect-flash');
-var isLoggedIn = require('./middleware/isloggedin');
 var passport = require('./config/passportConfig');
 var session = require('express-session');
 var app = express ();
@@ -47,13 +44,17 @@ app.use('/auth', require('./controllers/auth'));
 
 
 
+// app.listen(process.env.PORT || 3000);
+const port = process.env.PORT || 3000 
+let server = app.listen(port, () => {
+	var host = server.address().address;
+	var port = server.address().port;
+	console.log('teddi is listening at http://'+host+port);
+}); 
 
-app.listen(process.env.PORT || 3000);
 
 
-
-
-
+module.exports = server
 
 
 
