@@ -22,7 +22,6 @@ passport.use(new localStrategy({
 		where: { email: email }
 	}).then(function(user){
 		if(!user || !user.isValidPassword(password)){
-			console.log("###",user)
 			callback(null, false);
 		}
 		else{

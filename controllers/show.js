@@ -24,7 +24,6 @@ router.post("/show", isLoggedIn, function(req, res){
     		if (!error && response.statusCode == 200) {
       			var alertInfo = JSON.parse(body);
       			alertInfo.dbInfo = info;
-      			console.log('this is info#####################',alertInfo);
       			res.render('user/show', { results: alertInfo});
     		}
   		});

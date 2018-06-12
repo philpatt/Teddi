@@ -1,6 +1,4 @@
 $(document).ready(function() {
-console.log('hello from app.js');
-
 	$('.delete-link').click(function(e){
 		e.preventDefault();
 		$.ajax({

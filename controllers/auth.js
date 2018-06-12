@@ -24,7 +24,6 @@ router.get('/signup', function(req, res, next){
 
 // post signup info on form
 router.post('/signup', function(req, res, next){
-	console.log('req.body is', req.body);
 	db.user.findOrCreate({
 		where: { email: req.body.email },
 		defaults: {

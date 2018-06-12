@@ -24,7 +24,6 @@ router.get('/profile', isLoggedIn, function(req,res){
 
 //posts users favorited parks to park database and associates with user
 router.post('/', isLoggedIn, function(req, res) {
-  console.log('find', req.user.id, req.body);
   db.park.findOrCreate({     
     where: { 
       parkname: req.body.name,
@@ -40,7 +39,6 @@ router.post('/', isLoggedIn, function(req, res) {
       parkCode: req.body.parkCode
     }
   }).spread(function(park, wasCreated){
-  	// console.log('created park obj', park);
     if(wasCreated){
       res.redirect('/favorites/profile')
     } else {
@@ -53,14 +51,11 @@ router.post('/', isLoggedIn, function(req, res) {
 
 //delete favorited parks
 router.delete('/:id', function(req, res){
-  console.log('delete route. ID= ', req.params.id);
   db.park.destroy({
     where: {id: req.params.id}
   }).then(function(deleted){
-    console.log('deleted = ', deleted);
     res.send('sucesss');
   }).catch(function(err){
-    console.log('An error happened', err);
     res.send('fail');
   });
 });

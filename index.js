@@ -32,12 +32,10 @@ app.use(function(req, res, next){
 });
 
 app.get('/', function(req,res){
-	res.render('home');
-	//add suggested parks 
+	res.render('home'); 
 });
 
 //define controllers
-
 app.use('/prof', require('./controllers/profile'));
 app.use('/show', require('./controllers/show'));
 app.use('/search', require('./controllers/search'));

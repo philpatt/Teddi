@@ -15,7 +15,6 @@ router.get('/profile', isLoggedIn, function(req, res){
 });
 
 
-//delete favorites
 
 
 
