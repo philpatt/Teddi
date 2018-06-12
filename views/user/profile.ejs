@@ -17,7 +17,8 @@
 									<h2>
 										<%= item.parkname %>
 									</h2>
-									<form method="POST" id='search-form' action="/show/show">
+									<form method="POST" id='search-form' action="/show/
+									<%= item.parkname %>">
 										<input hidden type="text" name="parkname" value="<%= item.parkname %>">
 										<input hidden name='parkCode' type="text" value="<%= item.parkCode %>">
 										<button class='btn btn-success profBtn' type="text">more details</button>

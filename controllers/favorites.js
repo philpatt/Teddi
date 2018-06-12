@@ -1,11 +1,9 @@
 //this will be used to route to the profile page
 require('dotenv').config();
 var express = require('express');
-var passport = require('../config/passportConfig');
 var db = require('../models');
 var router = express.Router();
 var isLoggedIn = require('../middleware/isloggedin');
-var request = require('request');
 
 
 // YOU ARE HERE: /profile/
@@ -40,9 +38,9 @@ router.post('/', isLoggedIn, function(req, res) {
     }
   }).spread(function(park, wasCreated){
     if(wasCreated){
-      res.redirect('/favorites/profile')
+      res.redirect('/prof/profile')
     } else {
-      res.redirect('/favorites/profile')
+      res.redirect('/prof/profile')
     }
   }).catch(function(err){
     console.log('my error is ',err);
