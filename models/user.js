@@ -1,6 +1,5 @@
-'use strict';
+'use strict'; // helps you make fewer errors, by detecting more things that could lead to breakages
 var bcrypt = require('bcrypt');
-
 
 module.exports = (sequelize, DataTypes) => {
   var User = sequelize.define('user', {

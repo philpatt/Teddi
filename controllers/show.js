@@ -1,13 +1,13 @@
 
 require('dotenv').config();
 var express = require('express');
-var passport = require('../config/passportConfig');
 var db = require('../models');
 var router = express.Router();
 var isLoggedIn = require('../middleware/isloggedin');
 var request = require('request');
 
-router.post("/:id", isLoggedIn, function(req, res){
+// In profile, user can now access alerts for their selected park
+router.post("/:parkCode", isLoggedIn, function(req, res){
   db.park.find({
   	where: {parkCode: req.body.parkCode}
         }).then(function(info){

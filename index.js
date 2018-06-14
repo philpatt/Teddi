@@ -28,6 +28,8 @@ app.use(function(req, res, next){
 	next();
 });
 
+
+//home
 app.get('/', function(req,res){
 	res.render('home'); 
 });
